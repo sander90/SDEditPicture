@@ -1,0 +1,18 @@
+//
+//  PrefixHeader.pch
+//  SDEditPicture
+//
+//  Created by shansander on 2017/7/11.
+//  Copyright © 2017年 shansander. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import "AppDefineHeader.h"
+#import <UIColor+MCUIColorsUtils.h>
+#import <ReactiveCocoa.h>
+#import <Masonry.h>
+
+#endif /* PrefixHeader_pch */
