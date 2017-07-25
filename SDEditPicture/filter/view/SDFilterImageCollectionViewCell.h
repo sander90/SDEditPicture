@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "SDBaseEditImageCollectionViewCell.h"
+
 @class SDFilterFunctionModel;
 
-@interface SDFilterImageCollectionViewCell : UICollectionViewCell
+@interface SDFilterImageCollectionViewCell : SDBaseEditImageCollectionViewCell
 
 @property (nonatomic, weak) UIView * theFilterBgContentView;
 
@@ -21,7 +23,6 @@
 
 @property (nonatomic, strong) SDFilterFunctionModel * filterModel;
 
-+ (NSString * )ReuseIdentifier;
 
 - (void)loadFilterModel:(SDFilterFunctionModel * )model;
 

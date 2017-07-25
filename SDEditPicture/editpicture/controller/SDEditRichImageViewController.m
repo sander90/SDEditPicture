@@ -87,7 +87,9 @@
 - (void)pushCutViewController
 {
     SDCutFunctionViewController * cutController = [[SDCutFunctionViewController alloc] initWithFinishBlock:^(UIImage *image) {
+        self.showImage = image;
         
+        self.theRevealView.revealImage = self.showImage;
     }];
     cutController.showImageView = self.showImage;
     

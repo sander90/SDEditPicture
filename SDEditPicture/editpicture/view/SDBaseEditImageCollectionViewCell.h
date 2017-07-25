@@ -1,5 +1,5 @@
 //
-//  SDCutEditItemsView.h
+//  SDBaseEditImageCollectionViewCell.h
 //  SDEditPicture
 //
 //  Created by shansander on 2017/7/25.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SDCutEditItemsView : UIView
+@interface SDBaseEditImageCollectionViewCell : UICollectionViewCell
 
-@property (nonatomic, strong) NSArray * cutList;
++ (NSString * )ReuseIdentifier;
 
 @end

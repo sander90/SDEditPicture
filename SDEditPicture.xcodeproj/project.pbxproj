@@ -37,6 +37,17 @@
 		C54A3D231F26D120005DBE21 /* SDCutEditPhotoControllerItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D221F26D120005DBE21 /* SDCutEditPhotoControllerItemsView.m */; };
 		C54A3D261F26D2A8005DBE21 /* SDCutEditImageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D251F26D2A8005DBE21 /* SDCutEditImageViewModel.m */; };
 		C54A3D671F26F1D5005DBE21 /* SDCutEditItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D661F26F1D5005DBE21 /* SDCutEditItemsView.m */; };
+		C54A3D6A1F271832005DBE21 /* SDCutFunctionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D691F271832005DBE21 /* SDCutFunctionModel.m */; };
+		C54A3D6D1F271C8C005DBE21 /* SDCutEditItemsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D6C1F271C8C005DBE21 /* SDCutEditItemsCollectionViewCell.m */; };
+		C54A3D701F271D1D005DBE21 /* SDBaseEditImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D6F1F271D1D005DBE21 /* SDBaseEditImageCollectionViewCell.m */; };
+		C54A3D841F273373005DBE21 /* TOActivityCroppedImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D741F273373005DBE21 /* TOActivityCroppedImageProvider.m */; };
+		C54A3D851F273373005DBE21 /* TOCroppedImageAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D761F273373005DBE21 /* TOCroppedImageAttributes.m */; };
+		C54A3D861F273373005DBE21 /* TOCropViewControllerTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D781F273373005DBE21 /* TOCropViewControllerTransitioning.m */; };
+		C54A3D871F273373005DBE21 /* UIImage+CropRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D7A1F273373005DBE21 /* UIImage+CropRotate.m */; };
+		C54A3D881F273373005DBE21 /* TOCropOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D7D1F273373005DBE21 /* TOCropOverlayView.m */; };
+		C54A3D891F273373005DBE21 /* TOCropScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D7F1F273373005DBE21 /* TOCropScrollView.m */; };
+		C54A3D8A1F273373005DBE21 /* TOCropToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D811F273373005DBE21 /* TOCropToolbar.m */; };
+		C54A3D8B1F273373005DBE21 /* TOCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D831F273373005DBE21 /* TOCropView.m */; };
 		C580015F1F14C860009585D0 /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C580015E1F14C860009585D0 /* timg.jpeg */; };
 		C5C6BF491F0A112400E4C621 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C6BF481F0A112400E4C621 /* main.m */; };
 		C5C6BF4C1F0A112400E4C621 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C6BF4B1F0A112400E4C621 /* AppDelegate.m */; };
@@ -134,6 +145,28 @@
 		C54A3D251F26D2A8005DBE21 /* SDCutEditImageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCutEditImageViewModel.m; sourceTree = "<group>"; };
 		C54A3D651F26F1D5005DBE21 /* SDCutEditItemsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCutEditItemsView.h; sourceTree = "<group>"; };
 		C54A3D661F26F1D5005DBE21 /* SDCutEditItemsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCutEditItemsView.m; sourceTree = "<group>"; };
+		C54A3D681F271832005DBE21 /* SDCutFunctionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCutFunctionModel.h; sourceTree = "<group>"; };
+		C54A3D691F271832005DBE21 /* SDCutFunctionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCutFunctionModel.m; sourceTree = "<group>"; };
+		C54A3D6B1F271C8C005DBE21 /* SDCutEditItemsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCutEditItemsCollectionViewCell.h; sourceTree = "<group>"; };
+		C54A3D6C1F271C8C005DBE21 /* SDCutEditItemsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCutEditItemsCollectionViewCell.m; sourceTree = "<group>"; };
+		C54A3D6E1F271D1D005DBE21 /* SDBaseEditImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBaseEditImageCollectionViewCell.h; sourceTree = "<group>"; };
+		C54A3D6F1F271D1D005DBE21 /* SDBaseEditImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBaseEditImageCollectionViewCell.m; sourceTree = "<group>"; };
+		C54A3D731F273373005DBE21 /* TOActivityCroppedImageProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOActivityCroppedImageProvider.h; sourceTree = "<group>"; };
+		C54A3D741F273373005DBE21 /* TOActivityCroppedImageProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOActivityCroppedImageProvider.m; sourceTree = "<group>"; };
+		C54A3D751F273373005DBE21 /* TOCroppedImageAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOCroppedImageAttributes.h; sourceTree = "<group>"; };
+		C54A3D761F273373005DBE21 /* TOCroppedImageAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOCroppedImageAttributes.m; sourceTree = "<group>"; };
+		C54A3D771F273373005DBE21 /* TOCropViewControllerTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOCropViewControllerTransitioning.h; sourceTree = "<group>"; };
+		C54A3D781F273373005DBE21 /* TOCropViewControllerTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOCropViewControllerTransitioning.m; sourceTree = "<group>"; };
+		C54A3D791F273373005DBE21 /* UIImage+CropRotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CropRotate.h"; sourceTree = "<group>"; };
+		C54A3D7A1F273373005DBE21 /* UIImage+CropRotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CropRotate.m"; sourceTree = "<group>"; };
+		C54A3D7C1F273373005DBE21 /* TOCropOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOCropOverlayView.h; sourceTree = "<group>"; };
+		C54A3D7D1F273373005DBE21 /* TOCropOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOCropOverlayView.m; sourceTree = "<group>"; };
+		C54A3D7E1F273373005DBE21 /* TOCropScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOCropScrollView.h; sourceTree = "<group>"; };
+		C54A3D7F1F273373005DBE21 /* TOCropScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOCropScrollView.m; sourceTree = "<group>"; };
+		C54A3D801F273373005DBE21 /* TOCropToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOCropToolbar.h; sourceTree = "<group>"; };
+		C54A3D811F273373005DBE21 /* TOCropToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOCropToolbar.m; sourceTree = "<group>"; };
+		C54A3D821F273373005DBE21 /* TOCropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOCropView.h; sourceTree = "<group>"; };
+		C54A3D831F273373005DBE21 /* TOCropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOCropView.m; sourceTree = "<group>"; };
 		C580015E1F14C860009585D0 /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
 		C58001601F14CD0B009585D0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C58001611F14CD78009585D0 /* AppDefineHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDefineHeader.h; sourceTree = "<group>"; };
@@ -275,6 +308,7 @@
 		C54A3D161F260946005DBE21 /* cut */ = {
 			isa = PBXGroup;
 			children = (
+				C54A3D711F273373005DBE21 /* thirdparty */,
 				C54A3D171F260946005DBE21 /* model */,
 				C54A3D181F260946005DBE21 /* view */,
 				C54A3D191F260946005DBE21 /* viewcontroller */,
@@ -286,6 +320,8 @@
 		C54A3D171F260946005DBE21 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				C54A3D681F271832005DBE21 /* SDCutFunctionModel.h */,
+				C54A3D691F271832005DBE21 /* SDCutFunctionModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -297,6 +333,8 @@
 				C54A3D221F26D120005DBE21 /* SDCutEditPhotoControllerItemsView.m */,
 				C54A3D651F26F1D5005DBE21 /* SDCutEditItemsView.h */,
 				C54A3D661F26F1D5005DBE21 /* SDCutEditItemsView.m */,
+				C54A3D6B1F271C8C005DBE21 /* SDCutEditItemsCollectionViewCell.h */,
+				C54A3D6C1F271C8C005DBE21 /* SDCutEditItemsCollectionViewCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -317,6 +355,45 @@
 				C54A3D251F26D2A8005DBE21 /* SDCutEditImageViewModel.m */,
 			);
 			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		C54A3D711F273373005DBE21 /* thirdparty */ = {
+			isa = PBXGroup;
+			children = (
+				C54A3D721F273373005DBE21 /* Models */,
+				C54A3D7B1F273373005DBE21 /* Views */,
+			);
+			path = thirdparty;
+			sourceTree = "<group>";
+		};
+		C54A3D721F273373005DBE21 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C54A3D731F273373005DBE21 /* TOActivityCroppedImageProvider.h */,
+				C54A3D741F273373005DBE21 /* TOActivityCroppedImageProvider.m */,
+				C54A3D751F273373005DBE21 /* TOCroppedImageAttributes.h */,
+				C54A3D761F273373005DBE21 /* TOCroppedImageAttributes.m */,
+				C54A3D771F273373005DBE21 /* TOCropViewControllerTransitioning.h */,
+				C54A3D781F273373005DBE21 /* TOCropViewControllerTransitioning.m */,
+				C54A3D791F273373005DBE21 /* UIImage+CropRotate.h */,
+				C54A3D7A1F273373005DBE21 /* UIImage+CropRotate.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C54A3D7B1F273373005DBE21 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C54A3D7C1F273373005DBE21 /* TOCropOverlayView.h */,
+				C54A3D7D1F273373005DBE21 /* TOCropOverlayView.m */,
+				C54A3D7E1F273373005DBE21 /* TOCropScrollView.h */,
+				C54A3D7F1F273373005DBE21 /* TOCropScrollView.m */,
+				C54A3D801F273373005DBE21 /* TOCropToolbar.h */,
+				C54A3D811F273373005DBE21 /* TOCropToolbar.m */,
+				C54A3D821F273373005DBE21 /* TOCropView.h */,
+				C54A3D831F273373005DBE21 /* TOCropView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C5C6BF3B1F0A112400E4C621 = {
@@ -425,6 +502,8 @@
 				C5D7A1421F1DFA5800C6A211 /* SDEditImageEnumView.m */,
 				C5D7A1431F1DFA5800C6A211 /* SDRevealView.h */,
 				C5D7A1441F1DFA5800C6A211 /* SDRevealView.m */,
+				C54A3D6E1F271D1D005DBE21 /* SDBaseEditImageCollectionViewCell.h */,
+				C54A3D6F1F271D1D005DBE21 /* SDBaseEditImageCollectionViewCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -660,6 +739,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C54A3D201F260CC1005DBE21 /* SDDiyBaseFunctionViewController.m in Sources */,
+				C54A3D861F273373005DBE21 /* TOCropViewControllerTransitioning.m in Sources */,
 				C5D7A14C1F1DFA5800C6A211 /* SDEditImageEnumView.m in Sources */,
 				C5D7A1561F1DFB8A00C6A211 /* SDBaseEditPhotoEunmModel.m in Sources */,
 				C54A3D071F25F36E005DBE21 /* IFInkwellFilter.m in Sources */,
@@ -667,14 +747,18 @@
 				C54A3D021F25F36E005DBE21 /* IFBrannanFilter.m in Sources */,
 				C5D7A1491F1DFA5800C6A211 /* SDEditImageEnumModel.m in Sources */,
 				C5C6BF4C1F0A112400E4C621 /* AppDelegate.m in Sources */,
+				C54A3D8B1F273373005DBE21 /* TOCropView.m in Sources */,
 				C54A3D121F25F36E005DBE21 /* IFXproIIFilter.m in Sources */,
 				C5D7A15F1F1E001600C6A211 /* SDFilterEditImageViewModel.m in Sources */,
 				C54A3D001F25F36E005DBE21 /* IF1977Filter.m in Sources */,
+				C54A3D8A1F273373005DBE21 /* TOCropToolbar.m in Sources */,
 				C54A3D061F25F36E005DBE21 /* IFImageFilter.m in Sources */,
+				C54A3D871F273373005DBE21 /* UIImage+CropRotate.m in Sources */,
 				C5D7A1681F1E0A1700C6A211 /* AppFileComment.m in Sources */,
 				C54A3D151F25F36E005DBE21 /* GPUImageSixInputFilter.m in Sources */,
 				C5D7A1651F1E05B700C6A211 /* SDFilterFunctionModel.m in Sources */,
 				C54A3D1D1F260C94005DBE21 /* SDCutFunctionViewController.m in Sources */,
+				C54A3D891F273373005DBE21 /* TOCropScrollView.m in Sources */,
 				C54A3D031F25F36E005DBE21 /* IFEarlybirdFilter.m in Sources */,
 				C54A3D671F26F1D5005DBE21 /* SDCutEditItemsView.m in Sources */,
 				C5D7A14D1F1DFA5800C6A211 /* SDRevealView.m in Sources */,
@@ -684,6 +768,7 @@
 				C54A3D041F25F36E005DBE21 /* IFHefeFilter.m in Sources */,
 				C54A3D0E1F25F36E005DBE21 /* IFSutroFilter.m in Sources */,
 				C54A3D0C1F25F36E005DBE21 /* IFRiseFilter.m in Sources */,
+				C54A3D701F271D1D005DBE21 /* SDBaseEditImageCollectionViewCell.m in Sources */,
 				C54A3D141F25F36E005DBE21 /* GPUImageFourInputFilter.m in Sources */,
 				C54A3CCD1F25E11D005DBE21 /* SDFilterImageCollectionViewCell.m in Sources */,
 				C54A3D0B1F25F36E005DBE21 /* IFNormalFilter.m in Sources */,
@@ -692,15 +777,20 @@
 				C54A3D111F25F36E005DBE21 /* IFWaldenFilter.m in Sources */,
 				C5D7A16B1F1E1D2700C6A211 /* SDEditFilterItemsView.m in Sources */,
 				C54A3D101F25F36E005DBE21 /* IFValenciaFilter.m in Sources */,
+				C54A3D6A1F271832005DBE21 /* SDCutFunctionModel.m in Sources */,
 				C5C6BF491F0A112400E4C621 /* main.m in Sources */,
+				C54A3D881F273373005DBE21 /* TOCropOverlayView.m in Sources */,
 				C54A3D081F25F36E005DBE21 /* IFLomofiFilter.m in Sources */,
 				C54A3D261F26D2A8005DBE21 /* SDCutEditImageViewModel.m in Sources */,
 				C5D7A14E1F1DFA5800C6A211 /* SDEditImageViewModel.m in Sources */,
 				C54A3D091F25F36E005DBE21 /* IFLordKelvinFilter.m in Sources */,
 				C5D7A14A1F1DFA5800C6A211 /* SDControllScrollView.m in Sources */,
 				C54A3D0F1F25F36E005DBE21 /* IFToasterFilter.m in Sources */,
+				C54A3D851F273373005DBE21 /* TOCroppedImageAttributes.m in Sources */,
 				C54A3D231F26D120005DBE21 /* SDCutEditPhotoControllerItemsView.m in Sources */,
 				C5D7A14B1F1DFA5800C6A211 /* SDEditImageControllerItemsView.m in Sources */,
+				C54A3D841F273373005DBE21 /* TOActivityCroppedImageProvider.m in Sources */,
+				C54A3D6D1F271C8C005DBE21 /* SDCutEditItemsCollectionViewCell.m in Sources */,
 				C54A3D0A1F25F36E005DBE21 /* IFNashvilleFilter.m in Sources */,
 				C54A3D131F25F36E005DBE21 /* GPUImageFiveInputFilter.m in Sources */,
 				C5D7A1621F1E007300C6A211 /* SDBaseEditImageViewModel.m in Sources */,

@@ -15,4 +15,7 @@
 
 @property (nonatomic, strong) SDEditImageEnumModel * sureModel;
 
+
+@property (nonatomic, strong) NSArray * cutList;
+
 @end

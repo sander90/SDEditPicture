@@ -12,10 +12,13 @@
 
 #import "SDEditImageEnumView.h"
 
+#import "SDCutEditItemsView.h"
+
 @interface SDCutEditPhotoControllerItemsView ()
 
 @property (nonatomic, weak) UIView * theMainContentView;
 
+@property (nonatomic, weak) SDCutEditItemsView * theCutContentView;
 
 @end
 
@@ -27,13 +30,22 @@
     self = [super init];
     if (self) {
         self.frame = CGRectMake(0, 0, SCREEN_WIDTH, MAXSize(310));
-        
+        [self sd_configView];
     }
     return self;
 }
 
 - (void)sd_configView
 {
+    [self theCutContentView];
+    [self theMainContentView];
+}
+
+- (void)setCutList:(NSArray *)cutList
+{
+    _cutList = cutList;
+    
+    self.theCutContentView.cutList = self.cutList;
     
 }
 
@@ -69,6 +81,16 @@
         _theMainContentView = theView;
     }
     return _theMainContentView;
+}
+
+- (SDCutEditItemsView *)theCutContentView
+{
+    if (!_theCutContentView) {
+        SDCutEditItemsView * theView = [[SDCutEditItemsView alloc] initWithFrame:(CGRect){CGPointZero,{self.bounds.size.width,self.bounds.size.height - MAXSize(146)}}];
+        [self addSubview:theView];
+        _theCutContentView = theView;
+    }
+    return _theCutContentView;
 }
 
 /*

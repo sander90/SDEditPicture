@@ -13,10 +13,7 @@
 
 @implementation SDFilterImageCollectionViewCell
 
-+ (NSString * )ReuseIdentifier
-{
-    return NSStringFromClass(self);
-}
+
 
 - (void)loadFilterModel:(SDFilterFunctionModel * )model
 {
