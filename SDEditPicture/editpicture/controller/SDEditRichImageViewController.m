@@ -17,6 +17,8 @@
 
 #import "SDFilterFunctionViewController.h"
 
+#import "SDCutFunctionViewController.h"
+
 @interface SDEditRichImageViewController ()
 
 //@property (nonatomic, weak) SDControllScrollView * backControllerScrollView;
@@ -80,6 +82,18 @@
     [self presentViewController:filterController animated:NO completion:^{
         
     }];
+}
+
+- (void)pushCutViewController
+{
+    SDCutFunctionViewController * cutController = [[SDCutFunctionViewController alloc] initWithFinishBlock:^(UIImage *image) {
+        
+    }];
+    cutController.showImageView = self.showImage;
+    
+    [self presentViewController:cutController animated:NO completion:nil];
+    
+    
 }
 
 #pragma mark - getter

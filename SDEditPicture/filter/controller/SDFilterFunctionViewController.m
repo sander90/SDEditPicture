@@ -24,14 +24,6 @@
 
 @implementation SDFilterFunctionViewController
 
-- (instancetype)initWithFinishBlock:(SDDiyImageFinishBlock)finishBlock
-{
-    self = [super init];
-    if (self) {
-        _diyFinishBlock = finishBlock;
-    }
-    return self;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -61,6 +61,9 @@
         case SDEditPhotoFilter:
             [self createMainFilterModel];
             break;
+        case SDEditPhotoCut:
+            [self createMainCutModel];
+            break;
         default:
             break;
     }

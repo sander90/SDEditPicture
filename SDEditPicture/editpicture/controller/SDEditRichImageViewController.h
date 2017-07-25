@@ -14,4 +14,6 @@
 
 - (void)pushFilterViewController;
 
+- (void)pushCutViewController;
+
 @end

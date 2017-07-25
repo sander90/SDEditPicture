@@ -7,14 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SDDiyBaseFunctionViewController.h"
 @class IFImageFilter;
-@interface SDFilterFunctionViewController : UIViewController
+@interface SDFilterFunctionViewController : SDDiyBaseFunctionViewController
 
-@property (nonatomic, strong) UIImage * originImage;
 
-@property (nonatomic, strong) UIImage * showImageView;
 
-@property (nonatomic, copy)SDDiyImageFinishBlock diyFinishBlock;
 
 
 /**
@@ -31,22 +29,7 @@
 - (void)showOriginImageFilter;
 
 
-/**
- 点击取消按钮，通知viewController dismissViewController
- */
-- (void)onCancelAction;
-/**
- 点击确定按钮，通知viewController sure
- */
-- (void)onSureAction;
 
 
-/**
- init
-
- @param finishBlock 确定 渲染的block
- @return self
- */
-- (instancetype)initWithFinishBlock:(SDDiyImageFinishBlock)finishBlock;
 
 @end

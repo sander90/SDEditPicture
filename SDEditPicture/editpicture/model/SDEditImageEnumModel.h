@@ -17,6 +17,7 @@ typedef enum : NSUInteger {
     SDEditPhotoCancel,
     SDEditPhotoSure,
     SDEditPhotoFilter,
+    SDEditPhotoCut,
 } SDEditPhotoAction;
 
 

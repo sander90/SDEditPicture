@@ -65,6 +65,8 @@
     
     [enum2.done_subject subscribeNext:^(SDEditImageEnumModel * x) {
         NSLog(@"cut");
+        @strongify_self;
+        [[self targetViewController] pushCutViewController];
     }];
     
     SDEditImageEnumModel * enum3 = [[SDEditImageEnumModel alloc] initWithAction:SDEditPhotoMainDecorate];
