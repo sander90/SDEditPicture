@@ -59,7 +59,7 @@
 - (SDEditImageEnumModel *)cutModel
 {
     if (!_cutModel) {
-        _cutModel = [[SDEditImageEnumModel alloc] initWithAction:SDEditPhotoFilter];
+        _cutModel = [[SDEditImageEnumModel alloc] initWithAction:SDEditPhotoCut];
     }
     return _cutModel;
 }

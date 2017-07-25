@@ -37,9 +37,9 @@
 {
     if (self.editModel.photoAction == SDEditPhotoMainReset) {
         [self displayMainResetEditView];
-    }else if (self.editModel.photoAction == SDEditPhotoMainFilter){
+    }else if (self.editModel.photoAction == SDEditPhotoMainFilter || self.editModel.photoAction == SDEditPhotoFilter){
         [self displayEditImageView];
-    }else if (self.editModel.photoAction == SDEditPhotoMainCut){
+    }else if (self.editModel.photoAction == SDEditPhotoMainCut || self.editModel.photoAction == SDEditPhotoCut){
         [self displayEditImageView];
 
     }else if (self.editModel.photoAction == SDEditPhotoMainDecorate){
@@ -51,8 +51,6 @@
         [self displayCancelEditView];
     }else if (self.editModel.photoAction == SDEditPhotoSure){
         [self displaySureEditView];
-    }else if (self.editModel.photoAction == SDEditPhotoFilter){
-        [self displayEditImageView];
     }
     
 }
