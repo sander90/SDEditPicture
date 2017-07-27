@@ -27,6 +27,11 @@
 @property (nonatomic, weak) SDGraffitiResetButtonView * graffitiResetView;
 
 @property (nonatomic, weak) SDGraffitiToChooseColorView * graffitiSelectedColorView;
+
+@property (nonatomic, weak) UIView * theSelectedSizeContentView;
+
+@property (nonatomic, weak) UIView * theSelectedBrushContentView;
+
 @end
 
 @implementation SDGraffitiSelectedMainControllerView
@@ -70,32 +75,71 @@
     
    __block CGFloat lastPointx = CGRectGetMaxX(self.graffitiSelectedColorView.frame);
     
-    CGFloat unitWidth = (SCREEN_WIDTH - lastPointx) / self.graffiti_size_list.count;
-    
+    CGFloat unitWidth = (self.theSelectedBrushContentView.frame.size.width - lastPointx) / self.graffiti_size_list.count;
     
     [self.graffiti_size_list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         SDGraffitiSizeModel * sizemodel = obj;
         
         SDGraffitiSelectedSizeView * sizeView = [self createGraffSizeWithModel:sizemodel];
-        
+        [self.theSelectedBrushContentView addSubview:sizeView];
+
         sizeView.frame = (CGRect){{lastPointx,0},{unitWidth , sizeView.frame.size.height}};
         
         lastPointx += sizeView.frame.size.width;
     }];
-
+    
+    // 设置 EraseView
+    [self seteraserList];
+    
 }
 
 - (SDGraffitiSelectedSizeView * )createGraffSizeWithModel:(SDGraffitiSizeModel *)graffitiSizeModel
 {
     SDGraffitiSelectedSizeView * sizeview = [[SDGraffitiSelectedSizeView alloc] initWithSizeModel:graffitiSizeModel];
     
-    [self addSubview:sizeview];
-    
     return sizeview;
 }
 
 
+- (void)seteraserList
+{
+    CGFloat eraserWidth = self.graffiti_size_list.count * MAXSize(140);
+    
+    [self.theSelectedSizeContentView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(eraserWidth);
+    }];
+    
+    __block CGFloat lastPointx = 0;
+    
+    [self.graffiti_size_list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        SDGraffitiSizeModel * sizemodel = obj;
+        
+        SDGraffitiSelectedSizeView * sizeView = [self createGraffSizeWithModel:sizemodel];
+        
+        [self.theSelectedSizeContentView addSubview:sizeView];
+        
+        sizeView.isErearseModel = true;
+        sizeView.frame = (CGRect){{lastPointx,0},{MAXSize(140) , sizeView.frame.size.height}};
+        
+        lastPointx += sizeView.frame.size.width;
+    }];
+    
+    self.theSelectedSizeContentView.hidden = YES;
+    
+}
 
+- (void)showbrushControllerView
+{
+    self.theSelectedSizeContentView.hidden = YES;
+    
+    self.theSelectedBrushContentView.hidden = false;
+}
+
+- (void)showEraserControllerView
+{
+    self.theSelectedBrushContentView.hidden = YES;
+    self.theSelectedSizeContentView.hidden = false;
+}
 
 #pragma mark - getter
 - (SDGraffitiResetButtonView *)graffitiResetView
@@ -106,8 +150,6 @@
         theView.frame = (CGRect){CGPointZero,theView.frame.size};
         [self addSubview:theView];
         
-        
-        
         _graffitiResetView = theView;
     }
     return _graffitiResetView;
@@ -117,13 +159,44 @@
 {
     if (!_graffitiSelectedColorView) {
         SDGraffitiToChooseColorView * theView = [[SDGraffitiToChooseColorView alloc] init];
-        [self addSubview:theView];
+        [self.theSelectedBrushContentView addSubview:theView];
         
-        theView.frame = (CGRect){{CGRectGetMaxX(self.graffitiResetView.frame),0},theView.frame.size};
+        theView.frame = (CGRect){{0,0},theView.frame.size};
         
         _graffitiSelectedColorView = theView;
     }
     return _graffitiSelectedColorView;
+}
+
+- (UIView *)theSelectedSizeContentView
+{
+    if (!_theSelectedSizeContentView) {
+        UIView * theView = [[UIView alloc] init];
+        [self addSubview:theView];
+        
+        [theView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(self);
+            make.left.mas_equalTo(self).offset(MAXSize(196));
+            make.height.mas_equalTo(MAXSize(160));
+            make.width.mas_equalTo(0);
+        }];
+        
+        _theSelectedSizeContentView = theView;
+    }
+    return _theSelectedSizeContentView;
+}
+
+- (UIView *)theSelectedBrushContentView
+{
+    if (!_theSelectedBrushContentView) {
+        UIView * theView = [[UIView alloc] init];
+        [self addSubview:theView];
+        
+        theView.frame = CGRectMake(CGRectGetMaxX(self.graffitiResetView.frame), 0, self.bounds.size.width - CGRectGetMaxX(self.graffitiResetView.frame), self.bounds.size.height);
+        
+        _theSelectedBrushContentView = theView;
+    }
+    return _theSelectedBrushContentView;
 }
 
 /*

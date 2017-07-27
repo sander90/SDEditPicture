@@ -27,6 +27,7 @@
 
 @property (nonatomic, weak) SDGraffitiSelectedColorContentView * graffitiColorContentView;
 
+
 @end
 
 @implementation SDGraffitiEditPhotoControllerItemsView
@@ -60,11 +61,29 @@
     [self graffitiColorContentView];
     self.graffitiColorContentView.frame = (CGRect){CGPointZero,self.graffitiColorContentView.frame.size};
     
+    self.graffitiColorContentView.hidden = false;
+    
 }
 
 - (void)hideGraffitiColorView
 {
+    self.frame = CGRectMake(0, SCREENH_HEIGHT - MAXSize(306), SCREEN_WIDTH, MAXSize(306));
     
+    self.theMainContentView.frame = (CGRect){{0,self.bounds.size.height - self.theMainContentView.frame.size.height},self.theMainContentView.frame.size};
+    self.graffitiMainView.frame = (CGRect){{0,0},self.graffitiMainView.frame.size};
+    
+    self.graffitiColorContentView.hidden = true;
+    
+}
+
+- (void)showSelectedbrushView
+{
+    [self.graffitiMainView showbrushControllerView];
+}
+- (void)showSelectedEraserView
+{
+    [self hideGraffitiColorView];
+    [self.graffitiMainView showEraserControllerView];
 }
 
 
@@ -160,10 +179,13 @@
         SDGraffitiSelectedColorContentView * theView = [[SDGraffitiSelectedColorContentView alloc] init];
         theView.frame = (CGRect){{0,self.bounds.size.height},theView.frame.size};
         [self addSubview:theView];
+        theView.hidden = true;
         _graffitiColorContentView = theView;
     }
     return _graffitiColorContentView;
 }
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -56,10 +56,34 @@
     
     
     SDGraffitiSizeModel * sizemodel0 = [[SDGraffitiSizeModel alloc] initWithSize:MAXSize(20)];
+    
+    [sizemodel0.done_subject subscribeNext:^(id x) {
+        @strongify_self;
+        [self targetViewController].drawSize = MAXSize(20);
+    }];
     SDGraffitiSizeModel * sizemodel1 = [[SDGraffitiSizeModel alloc] initWithSize:MAXSize(30)];
+    [sizemodel1.done_subject subscribeNext:^(id x) {
+        @strongify_self;
+        [self targetViewController].drawSize = MAXSize(30);
+    }];
     SDGraffitiSizeModel * sizemodel2 = [[SDGraffitiSizeModel alloc] initWithSize:MAXSize(40)];
+    [sizemodel2.done_subject subscribeNext:^(id x) {
+        @strongify_self;
+        [self targetViewController].drawSize = MAXSize(40);
+
+    }];
     SDGraffitiSizeModel * sizemodel3 = [[SDGraffitiSizeModel alloc] initWithSize:MAXSize(50)];
+    [sizemodel3.done_subject subscribeNext:^(id x) {
+        @strongify_self;
+        [self targetViewController].drawSize = MAXSize(50);
+
+    }];
     SDGraffitiSizeModel * sizemodel4 = [[SDGraffitiSizeModel alloc] initWithSize:MAXSize(60)];
+    [sizemodel4.done_subject subscribeNext:^(id x) {
+        @strongify_self;
+        [self targetViewController].drawSize = MAXSize(60);
+
+    }];
     
     self.graffiti_size_list = @[sizemodel0,sizemodel1,sizemodel2,sizemodel3,sizemodel4];
     
@@ -68,34 +92,43 @@
     [colorModel0.done_subject subscribeNext:^(id x) {
         @strongify_self;
         self.graffitiSelectedColorModel.graffitiColor = colorModel0.graffitiColor;
+        
+        [self targetViewController].drawColor = colorModel0.graffitiColor;
     }];
     SDGraffitiColorModel * colorModel1 = [[SDGraffitiColorModel alloc] initWithColor:[UIColor colorWithHexRGB:0xff3d00]];
     [colorModel1.done_subject subscribeNext:^(id x) {
         @strongify_self;
         self.graffitiSelectedColorModel.graffitiColor = colorModel1.graffitiColor;
+        [self targetViewController].drawColor = colorModel1.graffitiColor;
+
     }];
     SDGraffitiColorModel * colorModel2 = [[SDGraffitiColorModel alloc] initWithColor:[UIColor colorWithHexRGB:0xffc400]];
     [colorModel1.done_subject subscribeNext:^(id x) {
         @strongify_self;
         self.graffitiSelectedColorModel.graffitiColor = colorModel2.graffitiColor;
+        [self targetViewController].drawColor = colorModel2.graffitiColor;
+
 
     }];
     SDGraffitiColorModel * colorModel3 = [[SDGraffitiColorModel alloc] initWithColor:[UIColor colorWithHexRGB:0x00e5ff]];
     [colorModel3.done_subject subscribeNext:^(id x) {
         @strongify_self;
         self.graffitiSelectedColorModel.graffitiColor = colorModel3.graffitiColor;
+        [self targetViewController].drawColor = colorModel3.graffitiColor;
 
     }];
     SDGraffitiColorModel * colorModel4 = [[SDGraffitiColorModel alloc] initWithColor:[UIColor colorWithHexRGB:0x3d5afe]];
     [colorModel4.done_subject subscribeNext:^(id x) {
         @strongify_self;
         self.graffitiSelectedColorModel.graffitiColor = colorModel4.graffitiColor;
+        [self targetViewController].drawColor = colorModel4.graffitiColor;
 
     }];
     SDGraffitiColorModel * colorModel5 = [[SDGraffitiColorModel alloc] initWithColor:[UIColor colorWithHexRGB:0xffffff]];
     [colorModel5.done_subject subscribeNext:^(id x) {
         @strongify_self;
         self.graffitiSelectedColorModel.graffitiColor = colorModel5.graffitiColor;
+        [self targetViewController].drawColor = colorModel5.graffitiColor;
 
     }];
     self.graffiti_color_list = @[colorModel0,colorModel1,colorModel2,colorModel3,colorModel4,colorModel5];
@@ -133,6 +166,11 @@
 {
     if (!_brushModel) {
         _brushModel = [[SDEditImageEnumModel alloc] initWithAction:SDEditPhotoBrush];
+        @weakify_self;
+        [_brushModel.done_subject subscribeNext:^(id x) {
+            @strongify_self;
+            [[self targetViewController] showSelectedbrushView];
+        }];
     }
     return _brushModel;
 }
@@ -140,6 +178,12 @@
 {
     if (!_eraserModel) {
         _eraserModel = [[SDEditImageEnumModel alloc] initWithAction:SDEditPhotoEraser];
+        @weakify_self;
+        [_eraserModel.done_subject subscribeNext:^(id x) {
+            @strongify_self;
+            [[self targetViewController] showSelectedEraserView];
+        }];
+        
     }
     return _eraserModel;
 }

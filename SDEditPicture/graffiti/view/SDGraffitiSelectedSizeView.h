@@ -7,15 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SDCustomControl.h"
 @class SDGraffitiSizeModel;
-@interface SDGraffitiSelectedSizeView : UIView
+@interface SDGraffitiSelectedSizeView : SDCustomControl
 
 @property (nonatomic, weak) UIView * theSizeView;
 
 @property (nonatomic, strong) SDGraffitiSizeModel * graffitiSizeModel;
 
 @property (nonatomic, strong) UIColor * graffitiColor;
+
+// 是不是橡皮擦
+@property (nonatomic, assign) BOOL isErearseModel;
 
 - (instancetype)initWithSizeModel:(SDGraffitiSizeModel *)sizeModel;
 

@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SDBaseEditPhotoEunmModel.h"
 
-@interface SDGraffitiSizeModel : NSObject
+@interface SDGraffitiSizeModel : SDBaseEditPhotoEunmModel
 
 @property (nonatomic, assign)CGFloat graffitiSize;
 

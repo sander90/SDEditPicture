@@ -34,4 +34,8 @@
 
 - (void)showGraffitiColorView;
 
+
+- (void)showSelectedbrushView;
+
+- (void)showSelectedEraserView;
 @end

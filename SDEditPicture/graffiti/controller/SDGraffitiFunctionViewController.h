@@ -10,6 +10,15 @@
 
 @interface SDGraffitiFunctionViewController : SDDiyBaseFunctionViewController
 
+
+@property (nonatomic, strong) UIColor * drawColor;
+
+@property (nonatomic, assign) CGFloat drawSize;
+
 - (void)showSelectedColorView;
+
+- (void)showSelectedbrushView;
+
+- (void)showSelectedEraserView;
 
 @end

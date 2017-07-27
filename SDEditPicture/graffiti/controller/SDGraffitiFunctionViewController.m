@@ -45,7 +45,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+#pragma mark - config
 - (void)sd_configView
 {
     self.view.backgroundColor = [UIColor whiteColor];
@@ -56,11 +56,9 @@
     
     [self graffitiView];
     
-    
-    
-    
-    
+
 }
+
 - (void)sd_configData
 {
     self.graffitiViewModel = (SDGraffitiEditImageViewModel *)[SDGraffitiEditImageViewModel modelViewController:self];
@@ -83,12 +81,39 @@
     
 }
 
+#pragma mark - done action
 - (void)showSelectedColorView
 {
     [self.graffitiView showGraffitiColorView];
     
 }
+- (void)showSelectedbrushView
+{
+    [self.graffitiView showSelectedbrushView];
+}
+- (void)showSelectedEraserView
+{
+    [self.graffitiView showSelectedEraserView];
+}
 
+
+#pragma mark - setter
+- (void)setDrawColor:(UIColor *)drawColor
+{
+    _drawColor = drawColor;
+    
+    self.drawView.current_color = self.drawColor;
+}
+
+- (void)setDrawSize:(CGFloat)drawSize
+{
+    _drawSize = drawSize;
+    
+    self.drawView.current_size = self.drawSize;
+    
+}
+
+#pragma mark - getter
 - (SDGraffitiEditPhotoControllerItemsView *)graffitiView
 {
     if (!_graffitiView) {

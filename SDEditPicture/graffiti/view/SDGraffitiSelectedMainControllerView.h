@@ -24,4 +24,9 @@
 
 - (void)showGraffitiSelectedColorView;
 
+
+- (void)showbrushControllerView;
+
+- (void)showEraserControllerView;
+
 @end

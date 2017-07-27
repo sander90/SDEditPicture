@@ -41,6 +41,9 @@
     
     RAC(self,graffitiColor) = RACObserve(self.graffitiSizeModel, graffitiColor);
     
+    [self addTarget:self action:@selector(actiongraffitiSize:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
 }
 
 - (void)setGraffitiColor:(UIColor *)graffitiColor
@@ -49,6 +52,12 @@
     
     self.theSizeView.backgroundColor = self.graffitiColor;
     
+    
+}
+
+- (void)actiongraffitiSize:(id)sender
+{
+    [self.graffitiSizeModel.done_subject sendNext:@"1"];
     
 }
 
