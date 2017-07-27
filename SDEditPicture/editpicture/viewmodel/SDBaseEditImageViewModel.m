@@ -12,8 +12,7 @@
 
 + (SDBaseEditImageViewModel * )modelViewController:(UIViewController *)viewController
 {
-    
-    
+
     SDBaseEditImageViewModel * viewModel = [[self alloc] initWithViewController:viewController];
     return viewModel;
 }

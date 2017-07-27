@@ -19,6 +19,10 @@
 
 #import "SDCutFunctionViewController.h"
 
+#import "SDDecorateFunctionViewController.h"
+
+#import "SDGraffitiFunctionViewController.h"
+
 @interface SDEditRichImageViewController ()
 
 //@property (nonatomic, weak) SDControllScrollView * backControllerScrollView;
@@ -70,7 +74,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+//TODO: 进入滤镜的界面
 - (void)pushFilterViewController
 {
     SDFilterFunctionViewController * filterController = [[SDFilterFunctionViewController alloc] initWithFinishBlock:^(UIImage *image) {
@@ -83,7 +87,7 @@
         
     }];
 }
-
+//TODO: 进入剪切的界面
 - (void)pushCutViewController
 {
     SDCutFunctionViewController * cutController = [[SDCutFunctionViewController alloc] initWithFinishBlock:^(UIImage *image) {
@@ -94,6 +98,31 @@
     cutController.showImageView = self.showImage;
     
     [self presentViewController:cutController animated:NO completion:nil];
+    
+}
+//TODO: 进入贴纸的界面
+- (void)pushDecorateViewController
+{
+    SDDecorateFunctionViewController * decorateController = [[SDDecorateFunctionViewController alloc] initWithFinishBlock:^(UIImage *image) {
+        
+    }];
+    
+    decorateController.showImageView = self.showImage;
+    
+    [self presentViewController:decorateController animated:NO completion:nil];
+    
+}
+
+- (void)pushGraffitiViewController
+{
+    SDGraffitiFunctionViewController * graffitiController = [[SDGraffitiFunctionViewController alloc] initWithFinishBlock:^(UIImage *image) {
+        
+    }];
+    
+    graffitiController.showImageView = self.showImage;
+    
+    [self presentViewController:graffitiController animated:NO completion:nil];
+    
     
     
 }

@@ -72,10 +72,16 @@
     SDEditImageEnumModel * enum3 = [[SDEditImageEnumModel alloc] initWithAction:SDEditPhotoMainDecorate];
     [enum3.done_subject subscribeNext:^(SDEditImageEnumModel * x) {
         NSLog(@"decorate");
+        @strongify_self;
+        [[self targetViewController] pushDecorateViewController];
     }];
     SDEditImageEnumModel * enum4 = [[SDEditImageEnumModel alloc] initWithAction:SDEditPhotoMainGraffiti];
     [enum4.done_subject subscribeNext:^(SDEditImageEnumModel * x) {
         NSLog(@"graffiti");
+        @strongify_self;
+        [[self targetViewController] pushGraffitiViewController];
+        
+        
     }];
     return @[enum0,enum1,enum2,enum3,enum4];
 }

@@ -48,6 +48,20 @@
 		C54A3D891F273373005DBE21 /* TOCropScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D7F1F273373005DBE21 /* TOCropScrollView.m */; };
 		C54A3D8A1F273373005DBE21 /* TOCropToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D811F273373005DBE21 /* TOCropToolbar.m */; };
 		C54A3D8B1F273373005DBE21 /* TOCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D831F273373005DBE21 /* TOCropView.m */; };
+		C54A3D931F274D36005DBE21 /* SDDecorateFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D921F274D36005DBE21 /* SDDecorateFunctionViewController.m */; };
+		C54A3D961F274D8C005DBE21 /* SDDecorateEditPhotoControllerItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D951F274D8C005DBE21 /* SDDecorateEditPhotoControllerItemsView.m */; };
+		C54A3D991F274DB3005DBE21 /* SDDecorateEditImageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D981F274DB3005DBE21 /* SDDecorateEditImageViewModel.m */; };
+		C54A3D9C1F282745005DBE21 /* SDDecorateEditItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D9B1F282745005DBE21 /* SDDecorateEditItemsView.m */; };
+		C54A3D9F1F2829F5005DBE21 /* SDDecorateFunctionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3D9E1F2829F5005DBE21 /* SDDecorateFunctionModel.m */; };
+		C54A3DA21F282DE1005DBE21 /* SDDecorateEditItemsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3DA11F282DE1005DBE21 /* SDDecorateEditItemsCollectionViewCell.m */; };
+		C54A3DA71F2836B6005DBE21 /* SDPasterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3DA41F2836B6005DBE21 /* SDPasterView.m */; };
+		C54A3DA81F2836B6005DBE21 /* SDTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3DA61F2836B6005DBE21 /* SDTagView.m */; };
+		C54A3DAB1F283715005DBE21 /* SDDecorationFunctionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3DAA1F283715005DBE21 /* SDDecorationFunctionButton.m */; };
+		C54A3DAE1F28387C005DBE21 /* UILabel+adjustsFontSizeToFitWidth.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3DAD1F28387C005DBE21 /* UILabel+adjustsFontSizeToFitWidth.m */; };
+		C54A3DB11F286BED005DBE21 /* SDInputTagContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3DB01F286BED005DBE21 /* SDInputTagContentView.m */; };
+		C54A3DB91F286FB6005DBE21 /* SDGraffitiFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3DB81F286FB6005DBE21 /* SDGraffitiFunctionViewController.m */; };
+		C54A3DBC1F287125005DBE21 /* SDGraffitiEditImageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3DBB1F287125005DBE21 /* SDGraffitiEditImageViewModel.m */; };
+		C54A3DBF1F2874DD005DBE21 /* SDGraffitiEditPhotoControllerItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3DBE1F2874DD005DBE21 /* SDGraffitiEditPhotoControllerItemsView.m */; };
 		C580015F1F14C860009585D0 /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C580015E1F14C860009585D0 /* timg.jpeg */; };
 		C5C6BF491F0A112400E4C621 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C6BF481F0A112400E4C621 /* main.m */; };
 		C5C6BF4C1F0A112400E4C621 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C6BF4B1F0A112400E4C621 /* AppDelegate.m */; };
@@ -72,6 +86,19 @@
 		C5D7A1651F1E05B700C6A211 /* SDFilterFunctionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7A1641F1E05B700C6A211 /* SDFilterFunctionModel.m */; };
 		C5D7A1681F1E0A1700C6A211 /* AppFileComment.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7A1671F1E0A1700C6A211 /* AppFileComment.m */; };
 		C5D7A16B1F1E1D2700C6A211 /* SDEditFilterItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7A16A1F1E1D2700C6A211 /* SDEditFilterItemsView.m */; };
+		C5E765BC1F287E730094FB3A /* SDGraffitiSelectedColorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E765BB1F287E730094FB3A /* SDGraffitiSelectedColorModel.m */; };
+		C5E765BF1F287E8F0094FB3A /* SDGraffitiSizeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E765BE1F287E8F0094FB3A /* SDGraffitiSizeModel.m */; };
+		C5E765C21F287EA00094FB3A /* SDGraffitiColorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E765C11F287EA00094FB3A /* SDGraffitiColorModel.m */; };
+		C5E765C51F287ED20094FB3A /* SDGraffitiResetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E765C41F287ED20094FB3A /* SDGraffitiResetModel.m */; };
+		C5E765CB1F2880890094FB3A /* SDGraffitiResetButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E765CA1F2880890094FB3A /* SDGraffitiResetButtonView.m */; };
+		C5E765CE1F2880A10094FB3A /* SDGraffitiToChooseColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E765CD1F2880A10094FB3A /* SDGraffitiToChooseColorView.m */; };
+		C5E765D11F2880B90094FB3A /* SDGraffitiSelectedSizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E765D01F2880B90094FB3A /* SDGraffitiSelectedSizeView.m */; };
+		C5E765D41F2880CC0094FB3A /* SDGraffitiSelectedColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E765D31F2880CC0094FB3A /* SDGraffitiSelectedColorView.m */; };
+		C5E765D71F2881160094FB3A /* SDGraffitiSelectedMainControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E765D61F2881160094FB3A /* SDGraffitiSelectedMainControllerView.m */; };
+		C5E765DC1F2896C80094FB3A /* SDDrawingContentData.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E765D91F2896C80094FB3A /* SDDrawingContentData.m */; };
+		C5E765DD1F2896C80094FB3A /* SDDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E765DB1F2896C80094FB3A /* SDDrawingView.m */; };
+		C5E765E01F289B1C0094FB3A /* SDCustomControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E765DF1F289B1C0094FB3A /* SDCustomControl.m */; };
+		C5E765E31F289DE80094FB3A /* SDGraffitiSelectedColorContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E765E21F289DE80094FB3A /* SDGraffitiSelectedColorContentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +194,34 @@
 		C54A3D811F273373005DBE21 /* TOCropToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOCropToolbar.m; sourceTree = "<group>"; };
 		C54A3D821F273373005DBE21 /* TOCropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOCropView.h; sourceTree = "<group>"; };
 		C54A3D831F273373005DBE21 /* TOCropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOCropView.m; sourceTree = "<group>"; };
+		C54A3D911F274D36005DBE21 /* SDDecorateFunctionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDecorateFunctionViewController.h; sourceTree = "<group>"; };
+		C54A3D921F274D36005DBE21 /* SDDecorateFunctionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDecorateFunctionViewController.m; sourceTree = "<group>"; };
+		C54A3D941F274D8C005DBE21 /* SDDecorateEditPhotoControllerItemsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDecorateEditPhotoControllerItemsView.h; sourceTree = "<group>"; };
+		C54A3D951F274D8C005DBE21 /* SDDecorateEditPhotoControllerItemsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDecorateEditPhotoControllerItemsView.m; sourceTree = "<group>"; };
+		C54A3D971F274DB3005DBE21 /* SDDecorateEditImageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDecorateEditImageViewModel.h; sourceTree = "<group>"; };
+		C54A3D981F274DB3005DBE21 /* SDDecorateEditImageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDecorateEditImageViewModel.m; sourceTree = "<group>"; };
+		C54A3D9A1F282745005DBE21 /* SDDecorateEditItemsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDecorateEditItemsView.h; sourceTree = "<group>"; };
+		C54A3D9B1F282745005DBE21 /* SDDecorateEditItemsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDecorateEditItemsView.m; sourceTree = "<group>"; };
+		C54A3D9D1F2829F5005DBE21 /* SDDecorateFunctionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDecorateFunctionModel.h; sourceTree = "<group>"; };
+		C54A3D9E1F2829F5005DBE21 /* SDDecorateFunctionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDecorateFunctionModel.m; sourceTree = "<group>"; };
+		C54A3DA01F282DE1005DBE21 /* SDDecorateEditItemsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDecorateEditItemsCollectionViewCell.h; sourceTree = "<group>"; };
+		C54A3DA11F282DE1005DBE21 /* SDDecorateEditItemsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDecorateEditItemsCollectionViewCell.m; sourceTree = "<group>"; };
+		C54A3DA31F2836B6005DBE21 /* SDPasterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPasterView.h; sourceTree = "<group>"; };
+		C54A3DA41F2836B6005DBE21 /* SDPasterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPasterView.m; sourceTree = "<group>"; };
+		C54A3DA51F2836B6005DBE21 /* SDTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTagView.h; sourceTree = "<group>"; };
+		C54A3DA61F2836B6005DBE21 /* SDTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTagView.m; sourceTree = "<group>"; };
+		C54A3DA91F283715005DBE21 /* SDDecorationFunctionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDecorationFunctionButton.h; sourceTree = "<group>"; };
+		C54A3DAA1F283715005DBE21 /* SDDecorationFunctionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDecorationFunctionButton.m; sourceTree = "<group>"; };
+		C54A3DAC1F28387C005DBE21 /* UILabel+adjustsFontSizeToFitWidth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+adjustsFontSizeToFitWidth.h"; sourceTree = "<group>"; };
+		C54A3DAD1F28387C005DBE21 /* UILabel+adjustsFontSizeToFitWidth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+adjustsFontSizeToFitWidth.m"; sourceTree = "<group>"; };
+		C54A3DAF1F286BED005DBE21 /* SDInputTagContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDInputTagContentView.h; sourceTree = "<group>"; };
+		C54A3DB01F286BED005DBE21 /* SDInputTagContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDInputTagContentView.m; sourceTree = "<group>"; };
+		C54A3DB71F286FB6005DBE21 /* SDGraffitiFunctionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGraffitiFunctionViewController.h; sourceTree = "<group>"; };
+		C54A3DB81F286FB6005DBE21 /* SDGraffitiFunctionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGraffitiFunctionViewController.m; sourceTree = "<group>"; };
+		C54A3DBA1F287125005DBE21 /* SDGraffitiEditImageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGraffitiEditImageViewModel.h; sourceTree = "<group>"; };
+		C54A3DBB1F287125005DBE21 /* SDGraffitiEditImageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGraffitiEditImageViewModel.m; sourceTree = "<group>"; };
+		C54A3DBD1F2874DD005DBE21 /* SDGraffitiEditPhotoControllerItemsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGraffitiEditPhotoControllerItemsView.h; sourceTree = "<group>"; };
+		C54A3DBE1F2874DD005DBE21 /* SDGraffitiEditPhotoControllerItemsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGraffitiEditPhotoControllerItemsView.m; sourceTree = "<group>"; };
 		C580015E1F14C860009585D0 /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
 		C58001601F14CD0B009585D0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C58001611F14CD78009585D0 /* AppDefineHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDefineHeader.h; sourceTree = "<group>"; };
@@ -214,6 +269,32 @@
 		C5D7A1671F1E0A1700C6A211 /* AppFileComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppFileComment.m; sourceTree = "<group>"; };
 		C5D7A1691F1E1D2700C6A211 /* SDEditFilterItemsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDEditFilterItemsView.h; sourceTree = "<group>"; };
 		C5D7A16A1F1E1D2700C6A211 /* SDEditFilterItemsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDEditFilterItemsView.m; sourceTree = "<group>"; };
+		C5E765BA1F287E730094FB3A /* SDGraffitiSelectedColorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGraffitiSelectedColorModel.h; sourceTree = "<group>"; };
+		C5E765BB1F287E730094FB3A /* SDGraffitiSelectedColorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGraffitiSelectedColorModel.m; sourceTree = "<group>"; };
+		C5E765BD1F287E8F0094FB3A /* SDGraffitiSizeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGraffitiSizeModel.h; sourceTree = "<group>"; };
+		C5E765BE1F287E8F0094FB3A /* SDGraffitiSizeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGraffitiSizeModel.m; sourceTree = "<group>"; };
+		C5E765C01F287EA00094FB3A /* SDGraffitiColorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGraffitiColorModel.h; sourceTree = "<group>"; };
+		C5E765C11F287EA00094FB3A /* SDGraffitiColorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGraffitiColorModel.m; sourceTree = "<group>"; };
+		C5E765C31F287ED20094FB3A /* SDGraffitiResetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGraffitiResetModel.h; sourceTree = "<group>"; };
+		C5E765C41F287ED20094FB3A /* SDGraffitiResetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGraffitiResetModel.m; sourceTree = "<group>"; };
+		C5E765C91F2880890094FB3A /* SDGraffitiResetButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGraffitiResetButtonView.h; sourceTree = "<group>"; };
+		C5E765CA1F2880890094FB3A /* SDGraffitiResetButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGraffitiResetButtonView.m; sourceTree = "<group>"; };
+		C5E765CC1F2880A10094FB3A /* SDGraffitiToChooseColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGraffitiToChooseColorView.h; sourceTree = "<group>"; };
+		C5E765CD1F2880A10094FB3A /* SDGraffitiToChooseColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGraffitiToChooseColorView.m; sourceTree = "<group>"; };
+		C5E765CF1F2880B90094FB3A /* SDGraffitiSelectedSizeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGraffitiSelectedSizeView.h; sourceTree = "<group>"; };
+		C5E765D01F2880B90094FB3A /* SDGraffitiSelectedSizeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGraffitiSelectedSizeView.m; sourceTree = "<group>"; };
+		C5E765D21F2880CC0094FB3A /* SDGraffitiSelectedColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGraffitiSelectedColorView.h; sourceTree = "<group>"; };
+		C5E765D31F2880CC0094FB3A /* SDGraffitiSelectedColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGraffitiSelectedColorView.m; sourceTree = "<group>"; };
+		C5E765D51F2881160094FB3A /* SDGraffitiSelectedMainControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGraffitiSelectedMainControllerView.h; sourceTree = "<group>"; };
+		C5E765D61F2881160094FB3A /* SDGraffitiSelectedMainControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGraffitiSelectedMainControllerView.m; sourceTree = "<group>"; };
+		C5E765D81F2896C80094FB3A /* SDDrawingContentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDrawingContentData.h; sourceTree = "<group>"; };
+		C5E765D91F2896C80094FB3A /* SDDrawingContentData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDrawingContentData.m; sourceTree = "<group>"; };
+		C5E765DA1F2896C80094FB3A /* SDDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDrawingView.h; sourceTree = "<group>"; };
+		C5E765DB1F2896C80094FB3A /* SDDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDrawingView.m; sourceTree = "<group>"; };
+		C5E765DE1F289B1C0094FB3A /* SDCustomControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCustomControl.h; sourceTree = "<group>"; };
+		C5E765DF1F289B1C0094FB3A /* SDCustomControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCustomControl.m; sourceTree = "<group>"; };
+		C5E765E11F289DE80094FB3A /* SDGraffitiSelectedColorContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGraffitiSelectedColorContentView.h; sourceTree = "<group>"; };
+		C5E765E21F289DE80094FB3A /* SDGraffitiSelectedColorContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGraffitiSelectedColorContentView.m; sourceTree = "<group>"; };
 		CFB3822226FB1957D39C5E4D /* libPods-SDEditPicture.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDEditPicture.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -396,6 +477,136 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		C54A3D8C1F274CF0005DBE21 /* decorate */ = {
+			isa = PBXGroup;
+			children = (
+				C54A3D8D1F274CF0005DBE21 /* controller */,
+				C54A3D8E1F274CF0005DBE21 /* model */,
+				C54A3D8F1F274CF0005DBE21 /* view */,
+				C54A3D901F274CF0005DBE21 /* viewmodel */,
+			);
+			path = decorate;
+			sourceTree = "<group>";
+		};
+		C54A3D8D1F274CF0005DBE21 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				C54A3D911F274D36005DBE21 /* SDDecorateFunctionViewController.h */,
+				C54A3D921F274D36005DBE21 /* SDDecorateFunctionViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		C54A3D8E1F274CF0005DBE21 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C54A3DAC1F28387C005DBE21 /* UILabel+adjustsFontSizeToFitWidth.h */,
+				C54A3DAD1F28387C005DBE21 /* UILabel+adjustsFontSizeToFitWidth.m */,
+				C54A3D9D1F2829F5005DBE21 /* SDDecorateFunctionModel.h */,
+				C54A3D9E1F2829F5005DBE21 /* SDDecorateFunctionModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C54A3D8F1F274CF0005DBE21 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C54A3DAF1F286BED005DBE21 /* SDInputTagContentView.h */,
+				C54A3DB01F286BED005DBE21 /* SDInputTagContentView.m */,
+				C54A3DA91F283715005DBE21 /* SDDecorationFunctionButton.h */,
+				C54A3DAA1F283715005DBE21 /* SDDecorationFunctionButton.m */,
+				C54A3DA31F2836B6005DBE21 /* SDPasterView.h */,
+				C54A3DA41F2836B6005DBE21 /* SDPasterView.m */,
+				C54A3DA51F2836B6005DBE21 /* SDTagView.h */,
+				C54A3DA61F2836B6005DBE21 /* SDTagView.m */,
+				C54A3D941F274D8C005DBE21 /* SDDecorateEditPhotoControllerItemsView.h */,
+				C54A3D951F274D8C005DBE21 /* SDDecorateEditPhotoControllerItemsView.m */,
+				C54A3D9A1F282745005DBE21 /* SDDecorateEditItemsView.h */,
+				C54A3D9B1F282745005DBE21 /* SDDecorateEditItemsView.m */,
+				C54A3DA01F282DE1005DBE21 /* SDDecorateEditItemsCollectionViewCell.h */,
+				C54A3DA11F282DE1005DBE21 /* SDDecorateEditItemsCollectionViewCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		C54A3D901F274CF0005DBE21 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				C54A3D971F274DB3005DBE21 /* SDDecorateEditImageViewModel.h */,
+				C54A3D981F274DB3005DBE21 /* SDDecorateEditImageViewModel.m */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		C54A3DB21F286F7A005DBE21 /* graffiti */ = {
+			isa = PBXGroup;
+			children = (
+				C54A3DB31F286F7A005DBE21 /* controller */,
+				C54A3DB41F286F7A005DBE21 /* model */,
+				C54A3DB51F286F7A005DBE21 /* view */,
+				C54A3DB61F286F7A005DBE21 /* viewmodel */,
+			);
+			path = graffiti;
+			sourceTree = "<group>";
+		};
+		C54A3DB31F286F7A005DBE21 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				C54A3DB71F286FB6005DBE21 /* SDGraffitiFunctionViewController.h */,
+				C54A3DB81F286FB6005DBE21 /* SDGraffitiFunctionViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		C54A3DB41F286F7A005DBE21 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C5E765BA1F287E730094FB3A /* SDGraffitiSelectedColorModel.h */,
+				C5E765BB1F287E730094FB3A /* SDGraffitiSelectedColorModel.m */,
+				C5E765BD1F287E8F0094FB3A /* SDGraffitiSizeModel.h */,
+				C5E765BE1F287E8F0094FB3A /* SDGraffitiSizeModel.m */,
+				C5E765C01F287EA00094FB3A /* SDGraffitiColorModel.h */,
+				C5E765C11F287EA00094FB3A /* SDGraffitiColorModel.m */,
+				C5E765C31F287ED20094FB3A /* SDGraffitiResetModel.h */,
+				C5E765C41F287ED20094FB3A /* SDGraffitiResetModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C54A3DB51F286F7A005DBE21 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C5E765D81F2896C80094FB3A /* SDDrawingContentData.h */,
+				C5E765D91F2896C80094FB3A /* SDDrawingContentData.m */,
+				C5E765DA1F2896C80094FB3A /* SDDrawingView.h */,
+				C5E765DB1F2896C80094FB3A /* SDDrawingView.m */,
+				C54A3DBD1F2874DD005DBE21 /* SDGraffitiEditPhotoControllerItemsView.h */,
+				C54A3DBE1F2874DD005DBE21 /* SDGraffitiEditPhotoControllerItemsView.m */,
+				C5E765C91F2880890094FB3A /* SDGraffitiResetButtonView.h */,
+				C5E765CA1F2880890094FB3A /* SDGraffitiResetButtonView.m */,
+				C5E765CC1F2880A10094FB3A /* SDGraffitiToChooseColorView.h */,
+				C5E765CD1F2880A10094FB3A /* SDGraffitiToChooseColorView.m */,
+				C5E765CF1F2880B90094FB3A /* SDGraffitiSelectedSizeView.h */,
+				C5E765D01F2880B90094FB3A /* SDGraffitiSelectedSizeView.m */,
+				C5E765D21F2880CC0094FB3A /* SDGraffitiSelectedColorView.h */,
+				C5E765D31F2880CC0094FB3A /* SDGraffitiSelectedColorView.m */,
+				C5E765D51F2881160094FB3A /* SDGraffitiSelectedMainControllerView.h */,
+				C5E765D61F2881160094FB3A /* SDGraffitiSelectedMainControllerView.m */,
+				C5E765E11F289DE80094FB3A /* SDGraffitiSelectedColorContentView.h */,
+				C5E765E21F289DE80094FB3A /* SDGraffitiSelectedColorContentView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		C54A3DB61F286F7A005DBE21 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				C54A3DBA1F287125005DBE21 /* SDGraffitiEditImageViewModel.h */,
+				C54A3DBB1F287125005DBE21 /* SDGraffitiEditImageViewModel.m */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
 		C5C6BF3B1F0A112400E4C621 = {
 			isa = PBXGroup;
 			children = (
@@ -419,6 +630,8 @@
 		C5C6BF461F0A112400E4C621 /* SDEditPicture */ = {
 			isa = PBXGroup;
 			children = (
+				C54A3DB21F286F7A005DBE21 /* graffiti */,
+				C54A3D8C1F274CF0005DBE21 /* decorate */,
 				C54A3D161F260946005DBE21 /* cut */,
 				C5D7A14F1F1DFB3A00C6A211 /* filter */,
 				C5D7A1351F1DFA5800C6A211 /* editpicture */,
@@ -494,6 +707,8 @@
 		C5D7A13C1F1DFA5800C6A211 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				C5E765DE1F289B1C0094FB3A /* SDCustomControl.h */,
+				C5E765DF1F289B1C0094FB3A /* SDCustomControl.m */,
 				C5D7A13D1F1DFA5800C6A211 /* SDControllScrollView.h */,
 				C5D7A13E1F1DFA5800C6A211 /* SDControllScrollView.m */,
 				C5D7A13F1F1DFA5800C6A211 /* SDEditImageControllerItemsView.h */,
@@ -738,6 +953,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5E765DC1F2896C80094FB3A /* SDDrawingContentData.m in Sources */,
 				C54A3D201F260CC1005DBE21 /* SDDiyBaseFunctionViewController.m in Sources */,
 				C54A3D861F273373005DBE21 /* TOCropViewControllerTransitioning.m in Sources */,
 				C5D7A14C1F1DFA5800C6A211 /* SDEditImageEnumView.m in Sources */,
@@ -745,20 +961,34 @@
 				C54A3D071F25F36E005DBE21 /* IFInkwellFilter.m in Sources */,
 				C5C6BF4F1F0A112400E4C621 /* ViewController.m in Sources */,
 				C54A3D021F25F36E005DBE21 /* IFBrannanFilter.m in Sources */,
+				C5E765BF1F287E8F0094FB3A /* SDGraffitiSizeModel.m in Sources */,
 				C5D7A1491F1DFA5800C6A211 /* SDEditImageEnumModel.m in Sources */,
+				C54A3DAE1F28387C005DBE21 /* UILabel+adjustsFontSizeToFitWidth.m in Sources */,
+				C54A3D961F274D8C005DBE21 /* SDDecorateEditPhotoControllerItemsView.m in Sources */,
 				C5C6BF4C1F0A112400E4C621 /* AppDelegate.m in Sources */,
+				C54A3DA71F2836B6005DBE21 /* SDPasterView.m in Sources */,
 				C54A3D8B1F273373005DBE21 /* TOCropView.m in Sources */,
+				C5E765C21F287EA00094FB3A /* SDGraffitiColorModel.m in Sources */,
+				C5E765DD1F2896C80094FB3A /* SDDrawingView.m in Sources */,
+				C54A3DAB1F283715005DBE21 /* SDDecorationFunctionButton.m in Sources */,
 				C54A3D121F25F36E005DBE21 /* IFXproIIFilter.m in Sources */,
+				C54A3D991F274DB3005DBE21 /* SDDecorateEditImageViewModel.m in Sources */,
 				C5D7A15F1F1E001600C6A211 /* SDFilterEditImageViewModel.m in Sources */,
 				C54A3D001F25F36E005DBE21 /* IF1977Filter.m in Sources */,
+				C54A3D9F1F2829F5005DBE21 /* SDDecorateFunctionModel.m in Sources */,
 				C54A3D8A1F273373005DBE21 /* TOCropToolbar.m in Sources */,
+				C54A3DA81F2836B6005DBE21 /* SDTagView.m in Sources */,
+				C5E765CB1F2880890094FB3A /* SDGraffitiResetButtonView.m in Sources */,
+				C54A3D9C1F282745005DBE21 /* SDDecorateEditItemsView.m in Sources */,
 				C54A3D061F25F36E005DBE21 /* IFImageFilter.m in Sources */,
 				C54A3D871F273373005DBE21 /* UIImage+CropRotate.m in Sources */,
+				C5E765CE1F2880A10094FB3A /* SDGraffitiToChooseColorView.m in Sources */,
 				C5D7A1681F1E0A1700C6A211 /* AppFileComment.m in Sources */,
 				C54A3D151F25F36E005DBE21 /* GPUImageSixInputFilter.m in Sources */,
 				C5D7A1651F1E05B700C6A211 /* SDFilterFunctionModel.m in Sources */,
 				C54A3D1D1F260C94005DBE21 /* SDCutFunctionViewController.m in Sources */,
 				C54A3D891F273373005DBE21 /* TOCropScrollView.m in Sources */,
+				C5E765D71F2881160094FB3A /* SDGraffitiSelectedMainControllerView.m in Sources */,
 				C54A3D031F25F36E005DBE21 /* IFEarlybirdFilter.m in Sources */,
 				C54A3D671F26F1D5005DBE21 /* SDCutEditItemsView.m in Sources */,
 				C5D7A14D1F1DFA5800C6A211 /* SDRevealView.m in Sources */,
@@ -767,12 +997,15 @@
 				C54A3D0D1F25F36E005DBE21 /* IFSierraFilter.m in Sources */,
 				C54A3D041F25F36E005DBE21 /* IFHefeFilter.m in Sources */,
 				C54A3D0E1F25F36E005DBE21 /* IFSutroFilter.m in Sources */,
+				C54A3DB91F286FB6005DBE21 /* SDGraffitiFunctionViewController.m in Sources */,
 				C54A3D0C1F25F36E005DBE21 /* IFRiseFilter.m in Sources */,
 				C54A3D701F271D1D005DBE21 /* SDBaseEditImageCollectionViewCell.m in Sources */,
 				C54A3D141F25F36E005DBE21 /* GPUImageFourInputFilter.m in Sources */,
 				C54A3CCD1F25E11D005DBE21 /* SDFilterImageCollectionViewCell.m in Sources */,
 				C54A3D0B1F25F36E005DBE21 /* IFNormalFilter.m in Sources */,
 				C5D7A1481F1DFA5800C6A211 /* SDEditRichImageViewController.m in Sources */,
+				C54A3DB11F286BED005DBE21 /* SDInputTagContentView.m in Sources */,
+				C5E765E31F289DE80094FB3A /* SDGraffitiSelectedColorContentView.m in Sources */,
 				C5D7A15C1F1DFFEC00C6A211 /* SDFilterEditPhotoControllerItemsView.m in Sources */,
 				C54A3D111F25F36E005DBE21 /* IFWaldenFilter.m in Sources */,
 				C5D7A16B1F1E1D2700C6A211 /* SDEditFilterItemsView.m in Sources */,
@@ -780,21 +1013,30 @@
 				C54A3D6A1F271832005DBE21 /* SDCutFunctionModel.m in Sources */,
 				C5C6BF491F0A112400E4C621 /* main.m in Sources */,
 				C54A3D881F273373005DBE21 /* TOCropOverlayView.m in Sources */,
+				C54A3DBF1F2874DD005DBE21 /* SDGraffitiEditPhotoControllerItemsView.m in Sources */,
+				C5E765BC1F287E730094FB3A /* SDGraffitiSelectedColorModel.m in Sources */,
+				C5E765C51F287ED20094FB3A /* SDGraffitiResetModel.m in Sources */,
 				C54A3D081F25F36E005DBE21 /* IFLomofiFilter.m in Sources */,
 				C54A3D261F26D2A8005DBE21 /* SDCutEditImageViewModel.m in Sources */,
 				C5D7A14E1F1DFA5800C6A211 /* SDEditImageViewModel.m in Sources */,
 				C54A3D091F25F36E005DBE21 /* IFLordKelvinFilter.m in Sources */,
+				C5E765D41F2880CC0094FB3A /* SDGraffitiSelectedColorView.m in Sources */,
 				C5D7A14A1F1DFA5800C6A211 /* SDControllScrollView.m in Sources */,
+				C54A3DA21F282DE1005DBE21 /* SDDecorateEditItemsCollectionViewCell.m in Sources */,
 				C54A3D0F1F25F36E005DBE21 /* IFToasterFilter.m in Sources */,
 				C54A3D851F273373005DBE21 /* TOCroppedImageAttributes.m in Sources */,
 				C54A3D231F26D120005DBE21 /* SDCutEditPhotoControllerItemsView.m in Sources */,
+				C54A3D931F274D36005DBE21 /* SDDecorateFunctionViewController.m in Sources */,
 				C5D7A14B1F1DFA5800C6A211 /* SDEditImageControllerItemsView.m in Sources */,
+				C54A3DBC1F287125005DBE21 /* SDGraffitiEditImageViewModel.m in Sources */,
 				C54A3D841F273373005DBE21 /* TOActivityCroppedImageProvider.m in Sources */,
 				C54A3D6D1F271C8C005DBE21 /* SDCutEditItemsCollectionViewCell.m in Sources */,
 				C54A3D0A1F25F36E005DBE21 /* IFNashvilleFilter.m in Sources */,
 				C54A3D131F25F36E005DBE21 /* GPUImageFiveInputFilter.m in Sources */,
+				C5E765D11F2880B90094FB3A /* SDGraffitiSelectedSizeView.m in Sources */,
 				C5D7A1621F1E007300C6A211 /* SDBaseEditImageViewModel.m in Sources */,
 				C54A3D051F25F36E005DBE21 /* IFHudsonFilter.m in Sources */,
+				C5E765E01F289B1C0094FB3A /* SDCustomControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

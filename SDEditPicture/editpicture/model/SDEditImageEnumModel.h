@@ -18,6 +18,10 @@ typedef enum : NSUInteger {
     SDEditPhotoSure,
     SDEditPhotoFilter,
     SDEditPhotoCut,
+    SDEditPhotoDecorate,
+    SDEditPhotoTag,
+    SDEditPhotoBrush,
+    SDEditPhotoEraser,
 } SDEditPhotoAction;
 
 

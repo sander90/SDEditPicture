@@ -51,6 +51,14 @@
         [self displayCancelEditView];
     }else if (self.editModel.photoAction == SDEditPhotoSure){
         [self displaySureEditView];
+    }else if (self.editModel.photoAction == SDEditPhotoTag){
+        [self displayEditImageView];
+    }else if (self.editModel.photoAction == SDEditPhotoDecorate){
+        [self displayEditImageView];
+    }else if (self.editModel.photoAction == SDEditPhotoBrush){
+        [self displayEditImageView];
+    }else if (self.editModel.photoAction == SDEditPhotoEraser){
+        [self displayEditImageView];
     }
     
 }

@@ -64,6 +64,18 @@
         case SDEditPhotoCut:
             [self createMainCutModel];
             break;
+        case SDEditPhotoDecorate:
+            [self createDecorateModel];
+            break;
+        case SDEditPhotoTag:
+            [self createTagsModel];
+            break;
+        case SDEditPhotoBrush:
+            [self createBrushModel];
+            break;
+        case SDEditPhotoEraser:
+            [self createEraserModel];
+            break;
         default:
             break;
     }
@@ -96,6 +108,30 @@
 {
     self.imageLink = [AppFileComment imagePathStringWithImagename:@"editimagedrawicon@2x"];
     self.enumText = @"涂鸦";
+}
+
+- (void)createDecorateModel
+{
+    self.imageLink = [AppFileComment imagePathStringWithImagename:@"editimagestickersicon@2x"];
+    
+    self.enumText = @"贴纸";
+}
+
+- (void)createTagsModel
+{
+    self.imageLink = [AppFileComment imagePathStringWithImagename:@"editimagetagicon@2x"];
+    self.enumText = @"标签";
+}
+- (void)createBrushModel{
+    self.imageLink = [AppFileComment imagePathStringWithImagename:@"editimagebrushicon@2x"];
+    
+    self.enumText = @"画笔";
+}
+- (void)createEraserModel
+{
+    self.imageLink = [AppFileComment imagePathStringWithImagename:@"editimageerasericon@2x"];
+    
+    self.enumText = @"橡皮擦";
 }
 
 
