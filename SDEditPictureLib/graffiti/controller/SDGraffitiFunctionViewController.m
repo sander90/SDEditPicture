@@ -90,10 +90,18 @@
 - (void)showSelectedbrushView
 {
     [self.graffitiView showSelectedbrushView];
+    
+    self.drawView.isEarse = false;
+    
+    if (self.drawView.previous_drawColor) {
+        self.drawView.current_color = self.drawView.previous_drawColor;
+    }
 }
 - (void)showSelectedEraserView
 {
     [self.graffitiView showSelectedEraserView];
+    self.drawView.isEarse = true;
+    self.drawView.current_color = [UIColor clearColor];
 }
 
 

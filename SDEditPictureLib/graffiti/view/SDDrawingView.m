@@ -41,6 +41,17 @@
         _current_color = current_color;
     }
 }
+
+- (void)setIsEarse:(BOOL)isEarse{
+    _isEarse = isEarse;
+    
+    if (self.isEarse) {
+        self.previous_drawColor = self.current_color;
+    }else{
+        
+    }
+    
+}
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     UITouch * touch = [touches anyObject];

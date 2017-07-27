@@ -134,9 +134,6 @@
     self.graffiti_color_list = @[colorModel0,colorModel1,colorModel2,colorModel3,colorModel4,colorModel5];
     
     self.graffitiSelectedColorModel.graffitiColor = colorModel0.graffitiColor;
-    
-    
-    
 }
 
 
