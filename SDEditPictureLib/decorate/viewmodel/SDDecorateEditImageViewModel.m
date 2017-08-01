@@ -34,6 +34,7 @@
 - (void)sd_configViewModel
 {
     SDDecorateFunctionModel * model0 = [[SDDecorateFunctionModel alloc] initWithFunctionType:SDDecorateFunctionReset];
+    
     NSArray * imageList = @[@"sticker_1",@"sticker_2",@"sticker_3",@"sticker_4",@"sticker_5",@"sticker_6",@"sticker_7",@"sticker_8",@"sticker_9",@"sticker_10",@"sticker_11",@"sticker_12",@"sticker_13",@"sticker_14",@"sticker_15",@"sticker_16",@"sticker_17",@"sticker_18",@"sticker_19",@"sticker_20",@"sticker_33"];
     __block NSMutableArray * imageModelList = [[NSMutableArray alloc] init];
     [imageModelList addObject:model0];
@@ -52,14 +53,14 @@
     @weakify_self;
     [model2.done_subject subscribeNext:^(id x) {
         @strongify_self;
-        [[self targetViewController] addTagModelForView:SDDecorationTagLeft];
+        [[self targetViewController] addTagModelForView:SDDecorationTagRight];
     }];
     
     SDDecorateFunctionModel * model3 = [[SDDecorateFunctionModel alloc] initWithFunctionType:SDDecorateFunctionImage];
     model3.imageLink = @"editimagerighttagicon@3x";
     [model3.done_subject subscribeNext:^(id x) {
         @strongify_self;
-        [[self targetViewController] addTagModelForView:SDDecorationTagRight];
+        [[self targetViewController] addTagModelForView:SDDecorationTagLeft];
     }];
     
     self.tagList = @[model0,model2,model3];
@@ -73,11 +74,12 @@
     @weakify_self;
     [self.decorateList enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         SDDecorateFunctionModel * model = obj;
-        [model.done_subject subscribeNext:^(id x) {
-            @strongify_self;
-            [[self targetViewController] addDecorateModelForView:model];
-        }];
-        
+        if (model.decorateType != SDDecorateFunctionReset) {
+            [model.done_subject subscribeNext:^(id x) {
+                @strongify_self;
+                [[self targetViewController] addDecorateModelForView:model];
+            }];
+        }
     }];
     
    

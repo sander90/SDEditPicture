@@ -99,6 +99,7 @@
 		C5C6BF541F0A112400E4C621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C6BF531F0A112400E4C621 /* Assets.xcassets */; };
 		C5C6BF571F0A112400E4C621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5C6BF551F0A112400E4C621 /* LaunchScreen.storyboard */; };
 		C5C6BF621F0A112400E4C621 /* SDEditPictureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C6BF611F0A112400E4C621 /* SDEditPictureTests.m */; };
+		C5DACB451F305A64007EB3B6 /* UIImage+GetFromShowImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DACB441F305A64007EB3B6 /* UIImage+GetFromShowImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -281,8 +282,8 @@
 		C573E62A1F29A7C500A25956 /* images.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = images.bundle; sourceTree = "<group>"; };
 		C573E6951F29B25700A25956 /* SDEditPictureLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDEditPictureLib.h; sourceTree = "<group>"; };
 		C573E6961F29B29000A25956 /* AppDefineHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDefineHeader.h; sourceTree = "<group>"; };
+		C573E6971F29BC4600A25956 /* SDEditPictureLib_PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDEditPictureLib_PrefixHeader.pch; sourceTree = "<group>"; };
 		C580015E1F14C860009585D0 /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
-		C58001601F14CD0B009585D0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C5C6BF441F0A112400E4C621 /* SDEditPicture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDEditPicture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C6BF481F0A112400E4C621 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C5C6BF4A1F0A112400E4C621 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -296,6 +297,8 @@
 		C5C6BF5D1F0A112400E4C621 /* SDEditPictureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDEditPictureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C6BF611F0A112400E4C621 /* SDEditPictureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDEditPictureTests.m; sourceTree = "<group>"; };
 		C5C6BF631F0A112400E4C621 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5DACB431F305A64007EB3B6 /* UIImage+GetFromShowImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GetFromShowImage.h"; sourceTree = "<group>"; };
+		C5DACB441F305A64007EB3B6 /* UIImage+GetFromShowImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GetFromShowImage.m"; sourceTree = "<group>"; };
 		CFB3822226FB1957D39C5E4D /* libPods-SDEditPicture.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDEditPicture.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -337,6 +340,9 @@
 				C573E6071F29A7C500A25956 /* graffiti */,
 				C573E62A1F29A7C500A25956 /* images.bundle */,
 				C573E6951F29B25700A25956 /* SDEditPictureLib.h */,
+				C573E6971F29BC4600A25956 /* SDEditPictureLib_PrefixHeader.pch */,
+				C5DACB431F305A64007EB3B6 /* UIImage+GetFromShowImage.h */,
+				C5DACB441F305A64007EB3B6 /* UIImage+GetFromShowImage.m */,
 			);
 			path = SDEditPictureLib;
 			sourceTree = SOURCE_ROOT;
@@ -774,7 +780,6 @@
 				C5C6BF551F0A112400E4C621 /* LaunchScreen.storyboard */,
 				C5C6BF581F0A112400E4C621 /* Info.plist */,
 				C5C6BF471F0A112400E4C621 /* Supporting Files */,
-				C58001601F14CD0B009585D0 /* PrefixHeader.pch */,
 			);
 			path = SDEditPicture;
 			sourceTree = "<group>";
@@ -1029,6 +1034,7 @@
 				C573E6691F29A7C500A25956 /* SDFilterFunctionModel.m in Sources */,
 				C573E68F1F29A7C500A25956 /* SDGraffitiSelectedColorView.m in Sources */,
 				C573E6551F29A7C500A25956 /* IFBrannanFilter.m in Sources */,
+				C5DACB451F305A64007EB3B6 /* UIImage+GetFromShowImage.m in Sources */,
 				C573E6561F29A7C500A25956 /* IFEarlybirdFilter.m in Sources */,
 				C573E65A1F29A7C500A25956 /* IFInkwellFilter.m in Sources */,
 				C5C6BF4C1F0A112400E4C621 /* AppDelegate.m in Sources */,
@@ -1184,7 +1190,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 544V686YSK;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/SDEditPicture/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SDEditPictureLib/SDEditPictureLib_PrefixHeader.pch";
 				INFOPLIST_FILE = SDEditPicture/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1199,7 +1205,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 544V686YSK;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/SDEditPicture/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SDEditPictureLib/SDEditPictureLib_PrefixHeader.pch";
 				INFOPLIST_FILE = SDEditPicture/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

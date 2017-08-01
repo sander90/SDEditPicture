@@ -18,4 +18,6 @@
 
 @property (nonatomic, strong) NSArray * cutList;
 
+- (void)sd_resetAction;
+
 @end

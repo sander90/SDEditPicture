@@ -104,7 +104,9 @@
 - (void)pushDecorateViewController
 {
     SDDecorateFunctionViewController * decorateController = [[SDDecorateFunctionViewController alloc] initWithFinishBlock:^(UIImage *image) {
+        self.showImage = image;
         
+        self.theRevealView.revealImage = self.showImage;
     }];
     
     decorateController.showImageView = self.showImage;
@@ -112,11 +114,13 @@
     [self presentViewController:decorateController animated:NO completion:nil];
     
 }
-
+//TODO: 进入画笔的界面
 - (void)pushGraffitiViewController
 {
     SDGraffitiFunctionViewController * graffitiController = [[SDGraffitiFunctionViewController alloc] initWithFinishBlock:^(UIImage *image) {
+        self.showImage = image;
         
+        self.theRevealView.revealImage = self.showImage;
     }];
     
     graffitiController.showImageView = self.showImage;

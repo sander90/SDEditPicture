@@ -15,6 +15,8 @@
 
 @property (nonatomic, weak) UICollectionView * theCollectionView;
 
+@property (nonatomic, strong) SDCutFunctionModel * resetFunctionModel;
+
 @end
 
 @implementation SDCutEditItemsView
@@ -40,15 +42,31 @@
 
 - (void)addMonitorResetFunctionModel
 {
-    SDCutFunctionModel * resetFunctionModel = self.cutList[0];
+    self.resetFunctionModel = self.cutList[0];
     @weakify_self;
-    [[RACObserve(resetFunctionModel, isSelected) distinctUntilChanged] subscribeNext:^(id x) {
+    [[RACObserve(self.resetFunctionModel, isSelected) distinctUntilChanged] subscribeNext:^(id x) {
         BOOL selected = [x boolValue];
         if (selected) {
             @strongify_self;
             [self.theCollectionView reloadData];
         }
     }];
+    
+}
+
+- (void)sd_resetFunctionModel
+{
+    [self.cutList enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        SDCutFunctionModel * model = obj;
+         model.isSelected = false;
+        if (model.cutModel == SDCutFunctionFree) {
+            model.isSelected = true;
+        }
+    }];
+    
+    [self.theCollectionView reloadData];
+    
+    
     
 }
 

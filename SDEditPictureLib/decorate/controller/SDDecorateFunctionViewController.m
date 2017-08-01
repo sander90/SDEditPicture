@@ -59,6 +59,8 @@
     [self sd_configView];
     
     [self sd_configData];
+    
+    [self registeredKeyboardNotification];
     // Do any additional setup after loading the view.
 }
 
@@ -90,10 +92,70 @@
     self.decorateView.tagModel = self.decorateViewModel.tagModel;
     
     self.decorateView.decorateList = self.decorateViewModel.decorateList;
+    
+    
+    [self monitorResetFunctionModel];
+    
+    
 }
 
 #pragma mark - done action
 
+- (void)onSureAction
+{
+    [self.pasterViewList enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[SDPasterView class]]) {
+            SDPasterView * pasterView = obj;
+            [pasterView hiddenBtn];
+        }else if ([obj isKindOfClass:[SDTagView class]]){
+            SDTagView * tagView = obj;
+            [tagView hideTagLine];
+        }
+    }];
+    
+    UIImage * image = [UIImage makeImageFromShowView:self.theRevealView.theRevealView];
+    
+    
+    if (self.diyFinishBlock) {
+        self.diyFinishBlock(image);
+    }
+    
+    [self dismissViewControllerAnimated:NO completion:nil];
+    
+    
+}
+
+- (void)monitorResetFunctionModel
+{
+    SDDecorateFunctionModel * resetFunctionModel = [self.decorateViewModel.decorateList firstObject];
+    @weakify_self;
+    [resetFunctionModel.done_subject subscribeNext:^(id x) {
+        @strongify_self;
+        
+        [self.pasterViewList enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            UIView * tagView = obj;
+            [tagView removeFromSuperview];
+        }];
+        
+        [self.pasterViewList removeAllObjects];
+        
+        [self ChangeResetFunctionModel];
+        
+    }];
+}
+
+- (void)ChangeResetFunctionModel
+{
+    SDDecorateFunctionModel * resetFunctionModel = [self.decorateViewModel.decorateList firstObject];
+    
+    if (self.pasterViewList.count > 0) {
+        resetFunctionModel.isSelected = YES;
+    }else{
+        resetFunctionModel.isSelected = NO;
+    }
+    
+    
+}
 //TODO:1. 被通知Controller 添加 贴纸
 - (void)addDecorateModelForView:(SDDecorateFunctionModel *)model
 {
@@ -104,8 +166,11 @@
     UIImage * image = [UIImage imageNamed:imageLink];
 
     SDPasterView * pasterView = [[SDPasterView alloc] initWithFrame:CGRectMake(0, 0, defaultPasterViewW_H, defaultPasterViewW_H)];
-    [self.theRevealView addSubview:pasterView];
-    pasterView.center = CGPointMake(self.theRevealView.frame.size.width / 2.f, self.theRevealView.frame.size.height / 2.f);
+    
+    
+    [self.theRevealView addTargetView:pasterView];
+    
+    pasterView.center = CGPointMake(self.theRevealView.theRevealView.frame.size.width / 2.f, self.theRevealView.theRevealView.frame.size.height / 2.f);
     pasterView.delegate = self;
     pasterView.pasterImage = image;
     
@@ -115,17 +180,19 @@
     
     [self.pasterViewList addObject:pasterView];
     
+    [self ChangeResetFunctionModel];
+    
 }
-
+//TODO: 2. 通知Controller 添加标签
 - (void)addTagModelForView:(SDDecorationTagModel)tagModel;
 {
-    SDTagView * tagView = [[SDTagView alloc] initWithFrame:CGRectMake(0, 0, defaultPasterViewW_H, defaultPasterViewW_H / 2.f) DecorationFunction:tagModel];
-    tagView.center = CGPointMake(self.theRevealView.frame.size.width / 2.f, self.theRevealView.frame.size.height / 2.f);
+    SDTagView * tagView = [[SDTagView alloc] initWithFrame:CGRectMake(0, 0, defaultPasterViewW_H * 2, defaultPasterViewW_H ) DecorationFunction:tagModel];
+    tagView.center = CGPointMake(self.theRevealView.theRevealView.frame.size.width / 2.f, self.theRevealView.theRevealView.frame.size.height / 2.f);
     tagView.delegate = self;
     
-    
-    [self.theRevealView addSubview:tagView];
+    [self.theRevealView addTargetView:tagView];
     [self.pasterViewList addObject:tagView];
+    [self ChangeResetFunctionModel];
     
 }
 
@@ -157,12 +224,59 @@
     [self.input_tag_content_view.inputTextField becomeFirstResponder];
 }
 
+#pragma mark - 检测监听keyboard
+- (void)registeredKeyboardNotification{
+    NSNotificationCenter *notic=[NSNotificationCenter defaultCenter];
+    
+    @weakify_self
+    [[notic rac_addObserverForName:UIKeyboardDidShowNotification
+                            object:nil] subscribeNext:^(NSNotification * notification) {
+        NSDictionary * userInfo = [notification userInfo];
+        @strongify_self
+        CGRect rect = [userInfo[@"UIKeyboardFrameEndUserInfoKey"] CGRectValue];
+        [self keyboardWillAppear:rect.size.height];
+        
+    }];
+    
+    [[notic rac_addObserverForName:UIKeyboardWillHideNotification object:nil] subscribeNext:^(NSNotification * notification) {
+        @strongify_self;
+        [self keyboardDidDisAppear];
+    }];
+}
+
+#pragma mark - keyboard 显示
+- (void)keyboardWillAppear:(CGFloat)height{
+    
+    CGFloat origin_y = SCREENH_HEIGHT - height - self.input_tag_content_view.frame.size.height;
+   
+
+    [UIView animateWithDuration:0.25 animations:^{
+        self.input_tag_content_view.frame = (CGRect){{self.input_tag_content_view.frame.origin.x,origin_y},self.input_tag_content_view.frame.size};
+    }];
+    
+    
+}
+#pragma mark - keyboard 消失
+- (void)keyboardDidDisAppear{
+    
+}
+
 
 #pragma mark - SDPasterViewDelegate
 
 - (void)deleteThePaster:(UIView *)target
 {
+    // 删除
+    NSInteger index = -1;
     
+    index = [self.pasterViewList indexOfObject:target];
+    
+    if (index != -1) {
+        // 根据地址查询的
+        [self.pasterViewList removeObjectAtIndex:index];
+        [self ChangeResetFunctionModel];
+        
+    }
 }
 
 - (void)SimplpTapForTagContentWithIndex:(NSInteger)index inView:(UIView *)target

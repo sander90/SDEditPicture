@@ -18,7 +18,7 @@ CGFloat const height_input_contentView = 50.f;
         UITextField * theView = [[UITextField alloc] init];
         [self.inputText_bg_view addSubview:theView];
         [theView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.inputText_bg_view).offset(5);
+            make.left.equalTo(self.inputText_bg_view).offset(10);
             make.top.equalTo(self.inputText_bg_view);
             make.bottom.equalTo(self.inputText_bg_view);
             make.right.equalTo(self.inputText_bg_view).offset(-5);
@@ -90,7 +90,7 @@ CGFloat const height_input_contentView = 50.f;
 {
     self = [super init];
     if (self) {
-        self.frame = CGRectMake(0, SCREENH_HEIGHT - height_input_contentView- 253, SCREEN_WIDTH, height_input_contentView);
+        self.frame = CGRectMake(0, SCREENH_HEIGHT, SCREEN_WIDTH, height_input_contentView);
     
         [self configView];
         

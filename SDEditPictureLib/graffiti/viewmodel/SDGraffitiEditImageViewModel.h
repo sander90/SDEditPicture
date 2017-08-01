@@ -7,6 +7,8 @@
 //
 
 #import "SDBaseEditImageViewModel.h"
+
+
 @class SDEditImageEnumModel;
 @class SDGraffitiResetModel;
 @class SDGraffitiSelectedColorModel;
@@ -28,5 +30,6 @@
 @property (nonatomic, strong) NSArray * graffiti_size_list;
 
 @property (nonatomic, strong) NSArray * graffiti_color_list;
+
 
 @end

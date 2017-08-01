@@ -41,6 +41,13 @@
     [self theMainContentView];
 }
 
+
+- (void)sd_resetAction
+{
+    [self.theCutContentView sd_resetFunctionModel];
+}
+
+
 - (void)setCutList:(NSArray *)cutList
 {
     _cutList = cutList;

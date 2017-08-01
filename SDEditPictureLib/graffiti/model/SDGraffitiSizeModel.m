@@ -15,9 +15,14 @@
     self = [super init];
     if (self) {
         _graffitiSize = graffitiSize;
-        _graffitiColor = [UIColor colorWithHexRGB:0x45454c];
+        [self defineGraffitiColor];
     }
     return self;
+}
+
+- (void)defineGraffitiColor
+{
+    self.graffitiColor =[UIColor colorWithHexRGB:0x45454c];
 }
 
 

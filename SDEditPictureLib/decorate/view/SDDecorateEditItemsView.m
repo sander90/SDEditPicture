@@ -39,7 +39,13 @@
 - (void)setDecorateList:(NSArray *)decorateList
 {
     _decorateList = decorateList;
-    
+    SDDecorateFunctionModel * model = [self.decorateList firstObject];
+    @weakify_self;
+    [[RACObserve(model, isSelected) distinctUntilChanged] subscribeNext:^(id x) {
+        @strongify_self;
+        [self.theCollectionView reloadData];
+    }];
+
     [self.theCollectionView reloadData];
 }
 
@@ -70,6 +76,11 @@
 {
     NSInteger row = indexPath.row;
     if (row == 0 ) {
+        
+        SDDecorateFunctionModel* resetModel = self.decorateList[row];
+        // 通知下去，我这里点击了 reset Model
+        [resetModel.done_subject sendNext:@"1"];
+        
         return;
     }
     

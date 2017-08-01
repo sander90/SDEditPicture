@@ -14,4 +14,6 @@
 
 @property (nonatomic, strong) UIColor * graffitiColor;
 
+@property (nonatomic, assign) NSInteger graffitiIndex;
+
 @end

@@ -53,6 +53,7 @@
 
     [self drawView];
     
+    self.drawView.frame = self.theRevealView.theRevealView.bounds;
     
     [self graffitiView];
     
@@ -82,6 +83,19 @@
 }
 
 #pragma mark - done action
+
+- (void)onSureAction{
+    
+    UIImage * image = [UIImage makeImageFromShowView:self.theRevealView.theRevealView];
+    
+    
+    if (self.diyFinishBlock) {
+        self.diyFinishBlock(image);
+    }
+    
+    [self dismissViewControllerAnimated:NO completion:nil];
+
+}
 - (void)showSelectedColorView
 {
     [self.graffitiView showGraffitiColorView];
@@ -150,7 +164,7 @@
         SDDrawingView * theView = [[SDDrawingView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREENH_HEIGHT - self.graffitiView.frame.size.height - MAXSize(132))];
         
         theView.backgroundColor = [UIColor clearColor];
-        [self.view insertSubview:theView belowSubview:self.graffitiView];
+        [self.theRevealView addTargetView:theView];
         _drawView = theView;
     }
     return _drawView;

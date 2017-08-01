@@ -40,6 +40,7 @@
     self.theSizeView.layer.cornerRadius = size / 2.f;
     
     RAC(self,graffitiColor) = RACObserve(self.graffitiSizeModel, graffitiColor);
+
     
     [self addTarget:self action:@selector(actiongraffitiSize:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -48,10 +49,39 @@
 
 - (void)setGraffitiColor:(UIColor *)graffitiColor
 {
+   
     _graffitiColor = graffitiColor;
+    
+    if ([[self.graffitiColor hexRGB] isEqualToString:@"ffffff"]){
+        
+        self.theSizeView.layer.borderColor = [UIColor blackColor].CGColor;
+        self.theSizeView.layer.borderWidth = 1.f;
+        
+    }else{
+        self.theSizeView.layer.borderWidth = 0.f;
+    }
+    
     
     self.theSizeView.backgroundColor = self.graffitiColor;
     
+    
+    
+    if (self.isErearseModel) {
+        if ([[self.graffitiColor hexRGB] isEqualToString:@"45454c"]) {
+            
+        }else{
+            self.theSizeView.backgroundColor = [UIColor clearColor];
+            
+            self.theSizeView.layer.borderWidth = 1;
+            
+            self.theSizeView.layer.borderColor = [UIColor colorWithHexRGB:0x45454c].CGColor;
+        }
+    }
+}
+
+- (void)setIsErearseModel:(BOOL)isErearseModel
+{
+    _isErearseModel = isErearseModel;
     
 }
 

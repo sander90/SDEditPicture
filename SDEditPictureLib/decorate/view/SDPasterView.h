@@ -40,6 +40,10 @@ extern CGFloat const defaultPasterViewW_H;
 
 @property (nonatomic, strong) UITapGestureRecognizer *tap;
 
+@property (nonatomic, strong) UIPinchGestureRecognizer * pinchGesture;
+
+@property (nonatomic, strong) UIRotationGestureRecognizer * rotationGesture;
+
 @property (nonatomic, assign) NSInteger index;
 /**隐藏“删除”和“缩放”按钮*/
 - (void)hiddenBtn;

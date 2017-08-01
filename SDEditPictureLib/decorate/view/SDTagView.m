@@ -18,11 +18,12 @@
 #define paster_insert_tag_space tag_btn_w_h/2
 
 /**总高度*/
-#define PASTER_SLIDE 120
+#define PASTER_SLIDE_2 120 * 2
 
-#define PASTER_SLIDE_HEIGHT 80.f
-/**安全边框*/
-#define SECURITY_LENGTH PASTER_SLIDE/2.f
+#define PASTER_SLIDE_HEIGHT PASTER_SLIDE
+
+
+
 
 @interface SDTagView ()<UIGestureRecognizerDelegate>
 {
@@ -51,7 +52,9 @@
     if (!_tagView) {
         
         CGFloat tag_height = self.bounds.size.height - paster_insert_tag_space;
-        SDTagContentView * theView = [[SDTagContentView alloc] initWithFrame:CGRectMake(paster_insert_tag_space, (tag_height - max_tag_height) /2.f, self.bounds.size.width - paster_insert_tag_space*2, max_tag_height)];
+        
+        CGFloat left_spacing = paster_insert_tag_space + 10;
+        SDTagContentView * theView = [[SDTagContentView alloc] initWithFrame:CGRectMake(left_spacing, (tag_height - max_tag_height) /2.f, self.bounds.size.width - left_spacing*2, max_tag_height)];
         
         theView.tagModel = self.tagModel;
         [self insertSubview:theView aboveSubview:self.thePerverView];
@@ -147,12 +150,10 @@
     
     self.tagView.center = CGPointMake(self.bounds.size.width / 2.f, self.bounds.size.height / 2.f);
     self.delegateImageView.frame = CGRectMake(0, 0, tag_btn_w_h, tag_btn_w_h);
-    self.scaleImageView.frame = CGRectMake(CGRectGetMaxX(self.tagView.frame) - tag_btn_w_h/2, CGRectGetMaxY(self.tagView.frame) - tag_btn_w_h/2, tag_btn_w_h, tag_btn_w_h);
+//    self.scaleImageView.frame = CGRectMake(CGRectGetMaxX(self.tagView.frame) - tag_btn_w_h/2, CGRectGetMaxY(self.tagView.frame) - tag_btn_w_h/2, tag_btn_w_h, tag_btn_w_h);
 
     self.thePerverView.frame = CGRectMake(tag_btn_w_h / 2.f, tag_btn_w_h / 2.f, self.frame.size.width - tag_btn_w_h, self.frame.size.height - tag_btn_w_h);
-    
-    
-    
+    self.scaleImageView.frame = CGRectMake(CGRectGetMaxX(self.thePerverView.frame) - tag_btn_w_h/2, CGRectGetMaxY(self.thePerverView.frame) - tag_btn_w_h/2, tag_btn_w_h, tag_btn_w_h);
     
 }
 //TODO: function set
@@ -164,16 +165,17 @@
     
     CGSize tag_size = [_tag_string sizeWithAttributes:@{NSFontAttributeName:tag_font}];
     CGFloat tag_width = tag_size.width + 30 + paster_insert_tag_space*2;
-    if (tag_width > PASTER_SLIDE*(1+0.5))
+    if (tag_width > PASTER_SLIDE_2*(1+0.5))
     {
-        tag_width = PASTER_SLIDE*(1+0.5);
+        tag_width = PASTER_SLIDE_2*(1+0.5);
     }
-    if (tag_width < PASTER_SLIDE*(1-0.2))
+    if (tag_width < PASTER_SLIDE_2*(1-0.2))
     {
-        tag_width = PASTER_SLIDE*(1-0.2) ;
+        tag_width = PASTER_SLIDE_2*(1-0.2) ;
     }
     self.frame = (CGRect){self.frame.origin,{tag_width , self.frame.size.height}};
-       self.scaleImageView.frame = CGRectMake(self.bounds.size.width-tag_btn_w_h, self.bounds.size.height-tag_btn_w_h, tag_btn_w_h, tag_btn_w_h);
+    self.thePerverView.frame = CGRectMake(tag_btn_w_h / 2.f, tag_btn_w_h / 2.f, self.frame.size.width - tag_btn_w_h, self.frame.size.height - tag_btn_w_h);
+    self.scaleImageView.frame = CGRectMake(CGRectGetMaxX(self.thePerverView.frame) - tag_btn_w_h/2, CGRectGetMaxY(self.thePerverView.frame) - tag_btn_w_h/2, tag_btn_w_h, tag_btn_w_h);
     [self changePasterContentFrameView];
     self.tagView.tag_string = self.tag_string;
 }
@@ -190,7 +192,10 @@
 {
 
     CGFloat tag_height = self.bounds.size.height - paster_insert_tag_space;
-    self.tagView.frame = CGRectMake(paster_insert_tag_space, (tag_height - max_tag_height) /2.f, self.bounds.size.width - paster_insert_tag_space*2, max_tag_height);
+    
+    CGFloat left_spacing = paster_insert_tag_space + 10;
+
+    self.tagView.frame = CGRectMake(left_spacing, (tag_height - max_tag_height) /2.f, self.bounds.size.width - left_spacing*2, max_tag_height);
     
     self.tagView.center = CGPointMake(self.bounds.size.width / 2.f, self.bounds.size.height / 2.f);
     
@@ -230,13 +235,13 @@
             
             CGFloat finalWidth  = self.bounds.size.width + (wChange) ;
             CGFloat finalHeight = self.bounds.size.height + (wChange) ;
-            if (finalWidth > PASTER_SLIDE*(1+0.5))
+            if (finalWidth > PASTER_SLIDE_2*(1+0.5))
             {
-                finalWidth = PASTER_SLIDE*(1+0.5);
+                finalWidth = PASTER_SLIDE_2*(1+0.5);
             }
-            if (finalWidth < PASTER_SLIDE*(1-0.2))
+            if (finalWidth < PASTER_SLIDE_2*(1-0.2))
             {
-                finalWidth = PASTER_SLIDE*(1-0.2) ;
+                finalWidth = PASTER_SLIDE_2*(1-0.2) ;
             }
             
             finalHeight = PASTER_SLIDE_HEIGHT;

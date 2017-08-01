@@ -15,7 +15,13 @@
 
 @property (nonatomic, strong) UIColor * graffitiColor;
 
+@property (nonatomic, assign) BOOL isEraser; // 判断是不是橡皮擦，define false;
+
+
 - (instancetype)initWithSize:(CGFloat)graffitiSize;
+
+
+- (void)defineGraffitiColor;
 
 
 @end

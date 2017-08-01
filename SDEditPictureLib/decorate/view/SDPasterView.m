@@ -26,6 +26,10 @@ CGFloat const defaultPasterViewW_H = 120;
     CGPoint prevPoint;
     CGPoint touchStart;
     CGRect  bgRect ;
+    
+    CGFloat lastScale;
+    
+    CGFloat lastRotation;
 }/**删除按钮*/
 @property (nonatomic, strong) SDDecorationFunctionButton *delegateImageView;
 /**缩放和旋转按钮*/
@@ -56,7 +60,10 @@ CGFloat const defaultPasterViewW_H = 120;
         self.delegateImageView.hidden = YES;
         self.scaleImageView.alpha = 0.0;
         self.scaleImageView.hidden = YES;
+        
     }];
+    
+    self.pasterImageView.layer.borderWidth = 0;
 }
 
 /**
@@ -107,9 +114,21 @@ CGFloat const defaultPasterViewW_H = 120;
     [scaleImageView setShowImage:[UIImage imageNamed:pasterImageLink]];
     
     self.panResizeGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(resizeTranslate:)] ;
+        
     scaleImageView.userInteractionEnabled = YES;
     self.panResizeGesture.delegate = self;
     [scaleImageView addGestureRecognizer:_panResizeGesture] ;
+    
+    
+    self.pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(magnifyGesture:)];
+    self.pinchGesture.delegate = self;
+    [self addGestureRecognizer:self.pinchGesture];
+    
+    self.rotationGesture = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(onRotationGesture:)];
+    self.rotationGesture.delegate = self;
+    [self addGestureRecognizer:self.rotationGesture];
+    
+    
     [self addSubview:scaleImageView];
     self.scaleImageView = scaleImageView;
     
@@ -145,6 +164,8 @@ CGFloat const defaultPasterViewW_H = 120;
  */
 - (void)resizeTranslate:(UIPanGestureRecognizer *)recognizer
 {
+
+    
     if ([recognizer state] == UIGestureRecognizerStateBegan)
     {
         prevPoint = [recognizer locationInView:self];
@@ -214,6 +235,50 @@ CGFloat const defaultPasterViewW_H = 120;
     
     //检查旋转和缩放是否出界
 //    [self checkIsOut];
+}
+
+//TODO: 放大的手势， 这个是两个手指头
+- (void)magnifyGesture:(UIPinchGestureRecognizer * )recognizer
+{
+    
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
+        lastScale = 1.0;
+        return;
+    }
+     CGFloat scale = 1.0 - (lastScale - [(UIPinchGestureRecognizer *)recognizer scale]);
+    
+    NSLog(@"--> %f",scale);
+    
+    if (scale <= 1.5 && scale >= 0.5) {
+        CGFloat finalWidth  = self.bounds.size.width * scale;
+        CGFloat finalHeight = self.bounds.size.height * scale;
+        
+        self.bounds = CGRectMake(self.bounds.origin.x, self.bounds.origin.y, finalWidth, finalHeight);
+        self.scaleImageView.frame = CGRectMake(self.bounds.size.width-btnW_H, self.bounds.size.height-btnW_H, btnW_H, btnW_H);
+        self.pasterImageView.frame = CGRectMake(paster_insert_space, paster_insert_space, self.bounds.size.width - paster_insert_space*2, self.bounds.size.height - paster_insert_space*2);
+        
+        [self changePasterContentFrameView];
+        
+        lastScale = [(UIPinchGestureRecognizer*)recognizer scale];
+    }
+    
+}
+//TODO: 旋转手势
+- (void)onRotationGesture:(UIRotationGestureRecognizer *)rotationGesture
+{
+    if([rotationGesture state] == UIGestureRecognizerStateEnded) {
+        
+        lastRotation = 0.0;
+        return;
+    }
+    
+    CGFloat rotation = 0.0 - (lastRotation - [rotationGesture rotation]);
+    CGAffineTransform currentTransform = self.transform;
+    CGAffineTransform newTransform = CGAffineTransformRotate(currentTransform,rotation);
+    
+    [self setTransform:newTransform];
+    [self setNeedsDisplay];
+    lastRotation = [rotationGesture rotation];
 }
 
 -(void)changePasterContentFrameView

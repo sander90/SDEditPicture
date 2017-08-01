@@ -10,7 +10,6 @@
 
 @interface SDRevealView ()
 
-@property (nonatomic, weak) UIImageView * theRevealView;
 
 @end
 
@@ -21,7 +20,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self theRevealView];
-        
+        self.userInteractionEnabled = YES;
     }
     return self;
 }
@@ -39,16 +38,10 @@
     
     CGFloat revealscale = 1;
     
-    if (image_size_width > image_size_height) {
-        if (image_size_width > self.bounds.size.width) {
-            revealscale = image_size_width / self.bounds.size.width;
-            revealImageSizeWidth = self.bounds.size.width;
-            revealImageSizeHeight  = image_size_height / revealscale;
-        }else{
-            revealscale = image_size_height / self.bounds.size.height;
-            revealImageSizeHeight = self.bounds.size.height;
-            revealImageSizeWidth = image_size_width / revealscale;
-        }
+    if (image_size_width > image_size_height) { // 图片的宽度大于高度
+        revealscale = image_size_width / self.bounds.size.width;
+        revealImageSizeWidth = self.bounds.size.width;
+        revealImageSizeHeight  = image_size_height / revealscale;
     }else{
         revealImageSizeWidth = image_size_width;
         revealImageSizeHeight = image_size_height;
@@ -63,11 +56,20 @@
     
 }
 
+
+- (void)addTargetView:(UIView *)view
+{
+    [self.theRevealView addSubview:view];
+}
+
+
 - (UIImageView *)theRevealView
 {
     if (!_theRevealView) {
         UIImageView * theView = [[UIImageView alloc] init];
         [self addSubview:theView];
+        
+        theView.userInteractionEnabled = YES;
         _theRevealView = theView;
     }
     return _theRevealView;

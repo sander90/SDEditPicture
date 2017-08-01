@@ -12,4 +12,9 @@
 
 @property (nonatomic, strong) UIImage * revealImage;
 
+@property (nonatomic, weak) UIImageView * theRevealView;
+
+
+- (void)addTargetView:(UIView *)view;
+
 @end

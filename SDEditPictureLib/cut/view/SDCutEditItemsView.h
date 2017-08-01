@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) NSArray * cutList;
 
+- (void)sd_resetFunctionModel;
+
 @end

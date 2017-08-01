@@ -74,7 +74,7 @@
                 if (self.showImageView) {
                     self.theRevealView.revealImage = self.showImageView;
                 }else{
-                    NSAssert(false, @"not filter image");
+                    self.theRevealView.revealImage = self.originImage;
                 }
             });
         });

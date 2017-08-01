@@ -91,6 +91,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self resetCropViewLayout];
+}
+
 
 #pragma mark - config view
 - (void)sd_configView
@@ -176,6 +183,10 @@
     }
     
     [self.cropView resetLayoutToDefaultAnimated:animated];
+    
+    
+    [[self cutFunctionView] sd_resetAction];
+    
 }
 
 
@@ -187,6 +198,9 @@
 {
     SDCutFunctionModel * model = self.cutViewModel.cutList[0];
     model.isSelected = true;
+    
+    
+    
 }
 - (void)cropViewDidBecomeNonResettable:(nonnull TOCropView *)cropView
 {

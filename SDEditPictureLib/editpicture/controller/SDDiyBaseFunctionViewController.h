@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIImage+GetFromShowImage.h"
 
 @interface SDDiyBaseFunctionViewController : UIViewController
 
